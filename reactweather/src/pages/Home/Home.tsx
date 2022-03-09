@@ -1,4 +1,5 @@
 import React from 'react'
+import Days from './components/Days/Days';
 import ThisDay from './components/ThisDay/ThisDay';
 import ThisDayInfo from './components/ThisDayInfo/ThisDayInfo';
 import s from './Home.module.scss';
@@ -12,6 +13,7 @@ const Home = (props: Props) => {
             <ThisDay />    
             <ThisDayInfo />
         </div>
+        <Days />
     </div>
   )
 }
