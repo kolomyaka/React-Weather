@@ -6,7 +6,9 @@
 }
 
 body {
+    position: relative;
     font-family: Montserrat, Arial;    
+    background: var(#{--body-background-default});
 }
 
 .container {

@@ -5,7 +5,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 20px;
-    background: #fff;
+    background: var(#{--card-background-default});
     box-shadow: $box-shadow;
     border-radius: 0 0 $border-radius $border-radius;
 }
@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background-color: rgba(71,147,255,.2);
+    background: #fff;
     border-radius: 10px;
     width: 149px;
     transition: .3s;
@@ -22,6 +22,7 @@
     .day { 
         margin-bottom: 7px;
         font-size: 18px;
+        font-weight: 500;
     }
     .day_info {
         color: $greyColor;
@@ -37,7 +38,7 @@
     }
     .temp_day {
         font-size: 18px;
-        font-weight: medium;
+        font-weight: 500;
     }   
     .temp_night {
         font-size: 13px;
