@@ -5,7 +5,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 20px;
-    background: var(#{--card-background-default});
+    background: var(#{--components-background-default});
     box-shadow: $box-shadow;
     border-radius: 0 0 $border-radius $border-radius;
 }
@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background: #fff;
+    background: var(#{--card-background-default});
     border-radius: 10px;
     width: 149px;
     transition: .3s;
@@ -23,6 +23,7 @@
         margin-bottom: 7px;
         font-size: 18px;
         font-weight: 500;
+        color: var(#{--text-color-default});
     }
     .day_info {
         color: $greyColor;
@@ -38,6 +39,7 @@
     }
     .temp_day {
         font-size: 18px;
+        color: var(#{--text-color-default});
         font-weight: 500;
     }   
     .temp_night {
@@ -50,7 +52,7 @@
         color: $greyColor;
     }
     &:hover {
-        box-shadow: 0 3px 20px rgba(147,144,144,.28)
+        box-shadow: var(#{--card-shadow-default});
     }
 }
 
@@ -69,8 +71,8 @@
     padding: 9px 20px;
     margin-right: 15px;
     font-size: 18px;
-    color: $liteColor;
-    background-color: $liteBackground;
+    color: var(#{--text-color-default});
+    background-color: var(#{--components-background-default});
     display: flex;
     align-items: center;
     justify-content: center;
