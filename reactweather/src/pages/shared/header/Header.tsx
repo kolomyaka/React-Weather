@@ -2,11 +2,16 @@ import React, { useEffect, useState } from "react";
 import Select from "react-select";
 
 import GlobalSvgSelector from "../../../assets/icons/global/GlobalSvgSelector";
+import { Theme } from "../../../context/ThemeContext";
+import { useTheme } from "../../../HOOKS/useTheme";
 import s from "./Header.module.scss";
 
 type Props = {};
 
 const Header = (props: Props) => {
+
+  const theme = useTheme();
+
   const options = [
     { value: "city-1", label: "Санкт-Петербург" },
     { value: "city-2", label: "Москва" },
@@ -16,7 +21,7 @@ const Header = (props: Props) => {
   const selectStyles = {
     control: (styles: any) => ({
       ...styles,
-      backgroundColor: 0 ? "#4F4F4F" : "rgba(71,147,255, .2)",
+      backgroundColor: theme.theme === Theme.DARK ? "#4F4F4F" : "rgba(71,147,255, .2)",
       width: "194px",
       height: "37px",
       border: "none",
@@ -25,35 +30,17 @@ const Header = (props: Props) => {
     }),
     singleValue: (styles: any) => ({
       ...styles,
-      color: theme === 'light' ? '#000' : '#fff',
+      color: theme.theme === Theme.LIGHT ? '#000' : '#fff',
     }),
   };
 
-  const [theme, setTheme] = useState("light");
+
 
   const changeTheme = () => {
-    // Функция для изменения темы
-    setTheme(theme === "light" ? "dark" : "light");
+    theme.changeTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
   };
 
-  useEffect(() => {
-    // Теперь в зависимости от значения переменной темы, изменяем css свойства
-    const root = document.querySelector(":root") as HTMLElement;
 
-    const components = [
-      'body-background',
-      "components-background",
-      "card-background",
-      "card-shadow",
-      "text-color",
-    ];
-
-    components.forEach((component) => {
-        root.style.setProperty(`--${component}-default`,
-        `var(--${component}-${theme})`
-        );
-    })
-  }, [theme]);
 
   return (
     <header className={s.header}>
