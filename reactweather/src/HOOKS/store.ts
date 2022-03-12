@@ -6,4 +6,4 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 export const useCustomDispatch = () => useDispatch<AppDispatch>();
 
 // Типизируем useSelector
-export const useCustomSelecotr: TypedUseSelectorHook<RootState> = useSelector;
+export const useCustomSelector: TypedUseSelectorHook<RootState> = useSelector;
