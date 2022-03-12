@@ -1,12 +1,17 @@
 import React from 'react'
-import Select from 'react-select';
+
 import GlobalSvgSelector from '../../../../assets/icons/global/GlobalSvgSelector';
 
 import s from './ThisDayInfo.module.scss';
 import cloud from '../../../../assets/images/cloud.png';
 import ThisDayItem from './ThisDayItem';
+import { Weather } from '../../../../store/types/types';
+import { usePressure, useWindDirection } from '../../../../HOOKS/useDayInfo';
+import { useSelector } from 'react-redux';
 
-type Props = {}
+type Props = {
+  weather : Weather
+}
 
 export interface Item {
   icon_id: string
@@ -16,13 +21,14 @@ export interface Item {
 
 
 
-const ThisDayInfo = (props: Props) => {
+
+const ThisDayInfo = ({weather}: Props) => {
 
   const items = [
-    {icon_id: 'temp', name: 'температура', value : '20° - ощущается как 17°'},
-    {icon_id: 'pressure', name: 'давление', value : '765 мм ртутного столба - нормальное'},
+    {icon_id: 'temp', name: 'температура', value : `${Math.ceil(weather.main.temp)}° - ощущается как ${Math.ceil(weather.main.feels_like)}°`},
+    {icon_id: 'pressure', name: 'давление', value : usePressure()},
     {icon_id: 'precipitation', name: 'Осадки', value : 'Без осадков'},
-    {icon_id: 'wind', name: 'ветер', value : '3 м/с юго-запад - легкий ветер'},
+    {icon_id: 'wind', name: 'ветер', value : `${weather.wind.speed} м/с ${useWindDirection()} - легкий ветер`},
   ]
 
   return (

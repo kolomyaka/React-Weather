@@ -7,3 +7,5 @@ export const useCustomDispatch = () => useDispatch<AppDispatch>();
 
 // Типизируем useSelector
 export const useCustomSelector: TypedUseSelectorHook<RootState> = useSelector;
+
+

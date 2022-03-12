@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import Select from "react-select";
 
 import GlobalSvgSelector from "../../../assets/icons/global/GlobalSvgSelector";
 import { Theme } from "../../../context/ThemeContext";
 import { useTheme } from "../../../HOOKS/useTheme";
+import { fetchCurrentWeather } from "../../../store/thunks/fetchCurrentWeather";
 import s from "./Header.module.scss";
 
 type Props = {};
 
 const Header = (props: Props) => {
 
+  const dispatch = useDispatch();
+
   const theme = useTheme();
 
   const options = [
-    { value: "city-1", label: "Санкт-Петербург" },
-    { value: "city-2", label: "Москва" },
-    { value: "city-3", label: "Мурманск" },
+    { value: "Sankt-Peterburg", label: "Санкт-Петербург" },
+    { value: "Moscow", label: "Москва" },
+    { value: "Murmansk", label: "Мурманск" },
   ];
 
   const selectStyles = {
@@ -26,21 +30,28 @@ const Header = (props: Props) => {
       height: "37px",
       border: "none",
       borderRadius: "10px",
-      zIndex: 1000000,
+      position: 'relative',
+      top:0,
+      right:0,
+      zIndex: 10000000,
     }),
     singleValue: (styles: any) => ({
       ...styles,
+      position: 'relative',
+      zIndex: 1000,
       color: theme.theme === Theme.LIGHT ? '#000' : '#fff',
     }),
   };
-
-
 
   const changeTheme = () => {
     theme.changeTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
   };
 
 
+  const changeSelect = (e:any) => {
+    dispatch(fetchCurrentWeather(e.value))
+    
+  }
 
   return (
     <header className={s.header}>
@@ -55,6 +66,7 @@ const Header = (props: Props) => {
           <GlobalSvgSelector id="change-theme" />
         </div>
         <Select
+          onChange={changeSelect}
           defaultValue={options[0]}
           styles={selectStyles}
           options={options}
