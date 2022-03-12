@@ -19,16 +19,13 @@ export interface Item {
   value : string
 }
 
-
-
-
 const ThisDayInfo = ({weather}: Props) => {
 
   const items = [
     {icon_id: 'temp', name: 'температура', value : `${Math.ceil(weather.main.temp)}° - ощущается как ${Math.ceil(weather.main.feels_like)}°`},
     {icon_id: 'pressure', name: 'давление', value : usePressure()},
     {icon_id: 'precipitation', name: 'Осадки', value : 'Без осадков'},
-    {icon_id: 'wind', name: 'ветер', value : `${weather.wind.speed} м/с ${useWindDirection()} - легкий ветер`},
+    {icon_id: 'wind', name: 'ветер', value : `${Math.ceil(weather.wind.speed)} м/с ${useWindDirection()} - легкий ветер`},
   ]
 
   return (
