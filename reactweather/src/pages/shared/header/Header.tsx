@@ -48,9 +48,8 @@ const Header = (props: Props) => {
   };
 
 
-  const changeSelect = (e:any) => {
+  const changeSelect = (e: any) => {
     dispatch(fetchCurrentWeather(e.value))
-    
   }
 
   return (
