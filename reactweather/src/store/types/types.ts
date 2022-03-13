@@ -11,3 +11,21 @@ export type Weather = {
         deg : number
     }
 }
+
+export type WeeklyWeather = {
+    daily : Array<daily>
+}
+
+type daily = {
+    temp : {
+        day : number
+        night : number
+    }
+    feels_like : {
+        day : number
+    }
+    wind_deg : number
+    wind_speed : number
+    dt : number
+    weather : Array<any>
+}

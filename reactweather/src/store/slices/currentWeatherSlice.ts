@@ -8,7 +8,7 @@ type CurrentWeather = {
     response : Response
 }
 
-type Response = {
+export type Response = {
     status : number
     message : string
 }

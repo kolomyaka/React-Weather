@@ -19,7 +19,5 @@ export const fetchCurrentWeather = (payload: string) => async (dispatch: AppDisp
         console.log(error);
     }
 
-
-
-
 }
+

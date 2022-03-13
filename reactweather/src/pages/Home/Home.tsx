@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { useCustomSelector } from '../../HOOKS/store';
-import { selectCurrentWeatherData } from '../../store/selectors';
+import { selectCurrentWeatherData, selectWeeklyWeatherData } from '../../store/selectors';
 import { fetchCurrentWeather } from '../../store/thunks/fetchCurrentWeather';
+import { fetchWeeklyWeather } from '../../store/thunks/fetchWeeklyWeather';
 import Days from './components/Days/Days';
 import ThisDay from './components/ThisDay/ThisDay';
 import ThisDayInfo from './components/ThisDayInfo/ThisDayInfo';
@@ -16,8 +17,11 @@ const Home = (props: Props) => {
 
   const { weather, isLoading, response } = useCustomSelector(selectCurrentWeatherData);  
 
+  const { weeklyWeather } = useCustomSelector(selectWeeklyWeatherData);
+
   useEffect(() => {
-    dispatch(fetchCurrentWeather('Sankt-Peterburg'))
+    dispatch(fetchCurrentWeather('Sankt-Peterburg'));
+    dispatch(fetchWeeklyWeather());
   }, [])
 
   return (
@@ -26,7 +30,7 @@ const Home = (props: Props) => {
             <ThisDay weather={weather} />    
             <ThisDayInfo weather={weather} />
         </div>
-        <Days />
+        <Days weeklyWeather={weeklyWeather} weather={weather} />
     </div>
   )
 }

@@ -30,7 +30,7 @@ const ThisDay = ({weather}: Props) => {
     <section className={s.this__day}>
         <div className={s.top__block}>
             <div className={s.top__wrapper}>
-                <div className={s.this__temp}>{Math.ceil(weather.main.temp)}</div>
+                <div className={s.this__temp}>{Math.floor(weather.main.temp)}</div>
                 <div className={s.this__day_name}>Сегодня</div>      
             </div>
             <GlobalSvgSelector id='sun' />
