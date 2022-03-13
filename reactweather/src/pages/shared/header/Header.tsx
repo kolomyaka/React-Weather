@@ -6,6 +6,7 @@ import GlobalSvgSelector from "../../../assets/icons/global/GlobalSvgSelector";
 import { Theme } from "../../../context/ThemeContext";
 import { useTheme } from "../../../HOOKS/useTheme";
 import { fetchCurrentWeather } from "../../../store/thunks/fetchCurrentWeather";
+import { fetchWeeklyWeather } from "../../../store/thunks/fetchWeeklyWeather";
 import s from "./Header.module.scss";
 
 type Props = {};
@@ -17,9 +18,9 @@ const Header = (props: Props) => {
   const theme = useTheme();
 
   const options = [
-    { value: "Sankt-Peterburg", label: "Санкт-Петербург" },
-    { value: "Moscow", label: "Москва" },
-    { value: "Murmansk", label: "Мурманск" },
+    { value: "Sankt-Peterburg", label: "Санкт-Петербург", label2: [59.8944, 30.2642]},
+    { value: "Moscow", label: "Москва", label2: [55.7522, 37.6156] },
+    { value: "Murmansk", label: "Мурманск", label2: [68, 34] },
   ];
 
   const selectStyles = {
@@ -50,6 +51,8 @@ const Header = (props: Props) => {
 
   const changeSelect = (e: any) => {
     dispatch(fetchCurrentWeather(e.value))
+    dispatch(fetchWeeklyWeather(e.label2[0],e.label2[1]));
+      
   }
 
   return (

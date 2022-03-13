@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { AxiosResponse } from "axios"
-import { Weather, WeeklyWeather } from "../types/types"
+import { WeeklyWeather } from "../types/types"
 import { Response } from "./currentWeatherSlice"
 
 

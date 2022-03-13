@@ -15,6 +15,8 @@ const Card = ({ day }: Props) => {
 
   const { dayName, day_info, icon_id, temp_day, temp_night, info } = day;
 
+  
+
   return (
     <section className={s.card}>
       <div className={s.day}>{dayName}</div>

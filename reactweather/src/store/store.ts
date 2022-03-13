@@ -1,5 +1,4 @@
-import { combineReducers, compose, configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import { composeWithDevTools } from "@reduxjs/toolkit/dist/devtoolsExtension";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import currentWeatherSliceReducer from './slices/currentWeatherSlice';
 import  weeklyWeatherSliceReducer  from './slices/weeklyWeatherSlice';
 

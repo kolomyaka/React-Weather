@@ -15,13 +15,13 @@ const Home = (props: Props) => {
 
   const dispatch = useDispatch();
 
-  const { weather, isLoading, response } = useCustomSelector(selectCurrentWeatherData);  
+  const { weather } = useCustomSelector(selectCurrentWeatherData);  
 
   const { weeklyWeather } = useCustomSelector(selectWeeklyWeatherData);
 
   useEffect(() => {
     dispatch(fetchCurrentWeather('Sankt-Peterburg'));
-    dispatch(fetchWeeklyWeather());
+    dispatch(fetchWeeklyWeather(59.8944, 30.2642));
   }, [])
 
   return (

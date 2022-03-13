@@ -1,13 +1,10 @@
 import React from 'react'
 
-import GlobalSvgSelector from '../../../../assets/icons/global/GlobalSvgSelector';
-
 import s from './ThisDayInfo.module.scss';
 import cloud from '../../../../assets/images/cloud.png';
 import ThisDayItem from './ThisDayItem';
 import { Weather } from '../../../../store/types/types';
 import { usePressure, useWindDirection } from '../../../../HOOKS/useDayInfo';
-import { useSelector } from 'react-redux';
 
 type Props = {
   weather : Weather
