@@ -13,7 +13,6 @@ type Props = {
 
 const ThisDay = ({weather}: Props) => {
 
-  console.log(weather.weather[0].main);
   
   
   const date = new Date();

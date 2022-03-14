@@ -23,7 +23,7 @@ export type Day = {
 
 const Days = ({weeklyWeather, weather}: Props) => {
 
-    console.log(weeklyWeather.daily[2].weather[0]);
+    console.log(weeklyWeather.daily);
     
 
         let days: Array<Day> = [
