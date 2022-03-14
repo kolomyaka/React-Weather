@@ -10,6 +10,11 @@ export type Weather = {
         speed : number
         deg : number
     }
+    weather : Array<WeatherArray>
+}
+
+type WeatherArray = {
+    main : string
 }
 
 export type WeeklyWeather = {
@@ -27,5 +32,10 @@ type daily = {
     wind_deg : number
     wind_speed : number
     dt : number
-    weather : Array<any>
+    weather : Array<Description>
+}
+
+type Description = {
+    description : string
+    main : string
 }

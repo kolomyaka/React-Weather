@@ -24,7 +24,12 @@ const initialState: CurrentWeather = {
         wind : {
             speed : 0,
             deg : 0,
-        }
+        },
+        weather : [
+            {
+                main : ''
+            }
+        ]
     },
     isLoading : false,
     response : {

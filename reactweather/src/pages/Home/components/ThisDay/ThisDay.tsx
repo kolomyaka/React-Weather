@@ -13,6 +13,9 @@ type Props = {
 
 const ThisDay = ({weather}: Props) => {
 
+  console.log(weather.weather[0].main);
+  
+  
   const date = new Date();
   const currentHours = date.getHours();
   let currentMinutes = date.getMinutes();
@@ -33,7 +36,7 @@ const ThisDay = ({weather}: Props) => {
                 <div className={s.this__temp}>{Math.floor(weather.main.temp)}</div>
                 <div className={s.this__day_name}>Сегодня</div>      
             </div>
-            <GlobalSvgSelector id='sun' />
+            <GlobalSvgSelector id={weather.weather[0].main} />
         </div>
         <div className={s.bottom__block}>
             <div className={s.this__time}>Время: <span>{currentTime}</span></div>

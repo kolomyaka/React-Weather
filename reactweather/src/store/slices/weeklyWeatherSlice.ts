@@ -5,13 +5,12 @@ import { Response } from "./currentWeatherSlice"
 
 
 type WeeklyWeatherType = {
-    weather : WeeklyWeather
+    weeklyWeather : WeeklyWeather
     isLoading : boolean
     response : Response
-    
 }
 
-const initialState = {
+const initialState: WeeklyWeatherType = {
     weeklyWeather : {
         daily : [
             {
@@ -26,7 +25,10 @@ const initialState = {
                     day : 0
                 },
                 weather: [
-                    {description : ''}
+                    {
+                        description : '',
+                        main : ''
+                    }
                 ]
             },
             {
@@ -41,7 +43,10 @@ const initialState = {
                     day : 0
                 },
                 weather: [
-                    {description : ''}
+                    {
+                        description : '',
+                        main : ''
+                    }
                 ]
             },
             {
@@ -56,7 +61,10 @@ const initialState = {
                     day : 0
                 },
                 weather: [
-                    {description : ''}
+                    {
+                        description : '',
+                        main : ''
+                    }
                 ]
             },
             {
@@ -71,7 +79,10 @@ const initialState = {
                     day : 0
                 },
                 weather: [
-                    {description : ''}
+                    {
+                        description : '',
+                        main : ''
+                    }
                 ]
             },           
             {
@@ -86,7 +97,10 @@ const initialState = {
                     day : 0
                 },
                 weather: [
-                    {description : ''}
+                    {
+                        description : '',
+                        main : ''
+                    }
                 ]
             },
             {
@@ -101,7 +115,10 @@ const initialState = {
                     day : 0
                 },
                 weather: [
-                    {description : ''}
+                    {
+                        description : '',
+                        main : ''
+                    }
                 ]
             },
             {
@@ -116,13 +133,16 @@ const initialState = {
                     day : 0
                 },
                 weather: [
-                    {description : ''}
+                    {
+                        description : '',
+                        main : ''
+                    }
                 ]
             },
         ],
     },
     isLoading : false,
-    reponse : {
+    response : {
         status : 0,
         message : ''
     }
@@ -140,14 +160,14 @@ export const weeklyWeatherSlice = createSlice({
         fetchWeeklySuccess(state, action: PayloadAction<AxiosResponse<WeeklyWeather>>) {
             state.weeklyWeather = action.payload.data;
             state.isLoading = false;
-            state.reponse = {
+            state.response = {
                 status : action.payload.status,
                 message : action.payload.statusText
             }
         },
         fetchWeeklyWeatherError(state, action: PayloadAction<AxiosResponse<WeeklyWeather>>) {
             state.isLoading = false;
-            state.reponse = {
+            state.response = {
                 status : action.payload.status,
                 message : action.payload.statusText
             }
