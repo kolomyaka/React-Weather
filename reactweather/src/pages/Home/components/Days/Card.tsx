@@ -25,8 +25,8 @@ type Props = {
 const Card = ({ temp,weather,dt }: Props) => {
   
   let myDate = new Date(dt * 1000);
-  let todayName = myDate.toLocaleString('ru', {weekday: "long"})
-  let todayDate = myDate.toLocaleString('ru',{month: '2-digit', day: '2-digit'})  
+  let todayName = myDate.toLocaleString('ru', {weekday: "short"})
+  let todayDate = myDate.toLocaleString('ru',{month: 'long', day: '2-digit'})  
 
   return (
     <section className={s.card} >
