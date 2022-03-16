@@ -12,134 +12,20 @@ type WeeklyWeatherType = {
 
 const initialState: WeeklyWeatherType = {
     weeklyWeather : {
-        daily : [
-            {
-                dt : 0,
-                wind_deg : 0,
-                wind_speed : 0,
-                temp : {
-                    day : 0,
-                    night : 0,
-                },
-                feels_like : {
-                    day : 0
-                },
-                weather: [
-                    {
-                        description : '',
-                        main : ''
-                    }
-                ]
+        daily : [{
+            temp: {
+                day : 0,
+                night : 0,
             },
-            {
-                dt : 0,
-                wind_deg : 0,
-                wind_speed : 0,
-                temp : {
-                    day : 0,
-                    night : 0,
-                },
-                feels_like : {
-                    day : 0
-                },
-                weather: [
-                    {
-                        description : '',
-                        main : ''
-                    }
-                ]
+            feels_like : {
+                day : 0
             },
-            {
-                dt : 0,
-                wind_deg : 0,
-                wind_speed : 0,
-                temp : {
-                    day : 0,
-                    night : 0,
-                },
-                feels_like : {
-                    day : 0
-                },
-                weather: [
-                    {
-                        description : '',
-                        main : ''
-                    }
-                ]
-            },
-            {
-                dt : 0,
-                wind_deg : 0,
-                wind_speed : 0,
-                temp : {
-                    day : 0,
-                    night : 0,
-                },
-                feels_like : {
-                    day : 0
-                },
-                weather: [
-                    {
-                        description : '',
-                        main : ''
-                    }
-                ]
-            },           
-            {
-                dt : 0,
-                wind_deg : 0,
-                wind_speed : 0,
-                temp : {
-                    day : 0,
-                    night : 0,
-                },
-                feels_like : {
-                    day : 0
-                },
-                weather: [
-                    {
-                        description : '',
-                        main : ''
-                    }
-                ]
-            },
-            {
-                dt : 0,
-                wind_deg : 0,
-                wind_speed : 0,
-                temp : {
-                    day : 0,
-                    night : 0,
-                },
-                feels_like : {
-                    day : 0
-                },
-                weather: [
-                    {
-                        description : '',
-                        main : ''
-                    }
-                ]
-            },
-            {
-                dt : 0,
-                wind_deg : 0,
-                wind_speed : 0,
-                temp : {
-                    day : 0,
-                    night : 0,
-                },
-                feels_like : {
-                    day : 0
-                },
-                weather: [
-                    {
-                        description : '',
-                        main : ''
-                    }
-                ]
-            },
-        ],
+            wind_deg : 0,
+            wind_speed : 0,
+            dt : 0,
+            weather : []
+
+        }],
     },
     isLoading : false,
     response : {
