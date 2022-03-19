@@ -7,40 +7,40 @@ import s from './Days.module.scss';
 import Tabs from './Tabs';
 
 type Props = {
-    weeklyWeather : WeeklyWeather
-    weather : Weather
+    weeklyWeather: WeeklyWeather
+    weather: Weather
 }
 
 export type Day = {
-    dayName : string
-    day_info : string
+    dayName: string
+    day_info: string
     icon_id: string
-    temp_day : number
-    temp_night : number
-    info : string
+    temp_day: number
+    temp_night: number
+    info: string
 }
 
 
-const Days = ({weeklyWeather, weather}: Props) => {
+const Days = ({ weeklyWeather, weather }: Props) => {
 
     const { daily } = useCustomSelector(state => state.weeklyWeatherSliceReducer.weeklyWeather)
-    let arr = daily.slice(1)         
+    let arr = daily.slice(1)
 
-        return <div>
-            <Tabs />
-            <section className={s.days}>
-                {
-                    arr.map((day: any) => (
-                        <Card 
+    return <div>
+        <Tabs />
+        <section className={s.days}>
+            {
+                arr.map((day: any) => (
+                    <Card
                         temp={day.temp}
                         key={day.dt}
                         weather={day.weather}
                         dt={day.dt}
-                        />
-                    ))
-                }
-            </section>
-        </div>
+                    />
+                ))
+            }
+        </section>
+    </div>
 
 }
 

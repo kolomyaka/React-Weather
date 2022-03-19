@@ -9,7 +9,6 @@ import Popup from "./pages/shared/Popup/Popup";
 function App() {
   return (
     <>
-      {/* <Modal isOpened={false} title="Хеллоу" onModalClose={() => {}}/> */}
       <Popup />
 
       <div className="global__container">

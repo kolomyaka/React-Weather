@@ -5,9 +5,12 @@ import { Item } from "../../Home/components/ThisDayInfo/ThisDayInfo";
 import ThisDayItem from "../../Home/components/ThisDayInfo/ThisDayItem";
 import s from "./Popup.module.scss";
 
-type Props = {};
+type Props = {
+  isModal? :boolean
+  todayName? : string
+};
 
-const Popup = () => {
+const Popup = ({isModal, todayName} : Props) => {
 
   const items = [
     { icon_id: "temp", name: "температура", value: "20° - ощущается как 17°" },
@@ -23,10 +26,11 @@ const Popup = () => {
   const { daily } = useCustomSelector(state => state.weeklyWeatherSliceReducer.weeklyWeather)
 
 
+  
 
   return (
     <>
-      <div className={s.blur}>
+      <div className={s.blur + ' ' + s.open}>
         <section className={s.popup}>
           <div className={s.popup__block}>
             <div className={s.day}>

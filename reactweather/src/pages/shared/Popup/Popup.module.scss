@@ -8,10 +8,10 @@
     padding: 40px;
     max-width: 750px;
     width: 100%;
-    display: none;
     background: var(#{--components-background-default});
     box-shadow: $box-shadow;
     border-radius: $border-radius;
+
     &__block {
         display: flex;
         justify-content: space-between;
@@ -20,22 +20,31 @@
 }
 
 .blur {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0,0,0,.25);
+    &.open {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, .25);
+    }
+    &.close {
+        display: none;
+    }
 }
+
+
 
 .close {
     position: absolute;
     top: 20px;
     right: 20px;
+
     svg {
         transition: .3s;
         cursor: pointer;
     }
-    &:hover { 
+
+    &:hover {
         svg {
             transform: rotate(360deg);
         }
@@ -45,25 +54,31 @@
 .day {
     display: flex;
     flex-direction: column;
+
     &__temp {
         font-size: 60px;
         font-weight: 500;
         color: $blueColor;
         margin-bottom: 12px;
     }
+
     &__name {
         line-height: 30px;
         font-size: 25px;
         margin-bottom: 12px;
         color: var(#{--text-color-default})
     }
+
     &__img {
         margin-bottom: 12px;
     }
+
     &__time {
         margin-bottom: 5px;
     }
-    &__time, &__city {
+
+    &__time,
+    &__city {
         font-size: 15px;
         color: $greyColor;
     }
