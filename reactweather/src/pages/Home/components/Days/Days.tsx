@@ -23,8 +23,6 @@ export type Day = {
 
 const Days = ({weeklyWeather, weather}: Props) => {
 
-
-    
     const { daily } = useCustomSelector(state => state.weeklyWeatherSliceReducer.weeklyWeather)
     let arr = daily.slice(1)         
 

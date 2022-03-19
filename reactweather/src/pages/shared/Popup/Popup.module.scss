@@ -3,18 +3,20 @@
 .popup {
     position: absolute;
     top: 31.5%;
-    
     left: calc(50% - 325px);
     z-index: 1000001;
-    display: none;
-    align-items: center;
-    justify-content: space-between;
     padding: 40px;
     max-width: 750px;
     width: 100%;
-    background: $light-background;
+    display: none;
+    background: var(#{--components-background-default});
     box-shadow: $box-shadow;
     border-radius: $border-radius;
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .blur {
@@ -53,6 +55,7 @@
         line-height: 30px;
         font-size: 25px;
         margin-bottom: 12px;
+        color: var(#{--text-color-default})
     }
     &__img {
         margin-bottom: 12px;
@@ -65,3 +68,5 @@
         color: $greyColor;
     }
 }
+
+// ----------------------------------

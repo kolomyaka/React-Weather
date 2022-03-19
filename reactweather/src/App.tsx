@@ -8,16 +8,20 @@ import Popup from "./pages/shared/Popup/Popup";
 
 function App() {
   return (
-    <div className="global__container">
-      {/* <Popup /> */}
-      <div className="container">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/month-statistics" element={<MonthStatistics />} />
-        </Routes>
+    <>
+      {/* <Modal isOpened={false} title="Хеллоу" onModalClose={() => {}}/> */}
+      <Popup />
+
+      <div className="global__container">
+        <div className="container">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/month-statistics" element={<MonthStatistics />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
