@@ -1,16 +1,19 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import currentWeatherSliceReducer from './slices/currentWeatherSlice';
-import  weeklyWeatherSliceReducer  from './slices/weeklyWeatherSlice';
+import weeklyWeatherSliceReducer from './slices/weeklyWeatherSlice';
+import popupSlices from "./slices/popupSlices";
+
 
 const rootReducer = combineReducers({
     currentWeatherSliceReducer,
-    weeklyWeatherSliceReducer
+    weeklyWeatherSliceReducer,
+    popupSlices,
 });
 
 export const store = configureStore({
-    reducer : rootReducer,
-    devTools : true,
-    middleware : ((getDefaultMiddleware) => getDefaultMiddleware({serializableCheck: false}))
+    reducer: rootReducer,
+    devTools: true,
+    middleware: ((getDefaultMiddleware) => getDefaultMiddleware({ serializableCheck: false }))
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

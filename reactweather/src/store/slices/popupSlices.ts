@@ -9,6 +9,7 @@ const initialState = {
     pressure: 0,
     wind: 0,
     icon: '',
+    isVisible: false,
 }
 
 
@@ -17,6 +18,11 @@ export const popupSlice = createSlice({
     name: 'popup',
     initialState,
     reducers: {
-
+        toggleVision(state) {
+            state.isVisible = true;
+        },
     }
 })
+
+export const { toggleVision } = popupSlice.actions;
+export default popupSlice.reducer

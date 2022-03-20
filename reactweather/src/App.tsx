@@ -10,7 +10,6 @@ function App() {
   return (
     <>
       <Popup />
-
       <div className="global__container">
         <div className="container">
           <Header />

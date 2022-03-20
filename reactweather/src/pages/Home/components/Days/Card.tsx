@@ -2,11 +2,11 @@ import React, { ReactElement, useState } from 'react'
 import { Day } from './Days';
 import CardSvgSelector from '../../../../assets/icons/Card/CardSvgSelector';
 
-
-
+import { toggleVision } from "../../../../store/slices/popupSlices";
 import s from './Days.module.scss';
 import Popup from '../../../shared/Popup/Popup';
 import { WeeklyWeather } from '../../../../store/types/types';
+import { useDispatch } from 'react-redux';
 
 type TempType = {
   day: number
@@ -88,16 +88,17 @@ type Props = {
 
 const Card = ({ temp, weather, dt, pressure, feelsLike, windDeg, windSpeed }: Props) => {
 
+  const dispatch = useDispatch()
 
   let myDate = new Date(dt * 1000);
   let todayName = myDate.toLocaleString('ru', { weekday: "short" })
   let todayDate = myDate.toLocaleString('ru', { month: 'long', day: '2-digit' })
 
+
   const [isModal, setModal] = useState(false);
 
   const handleClick = () => {
-    console.log(windSpeed);
-
+    dispatch(toggleVision())
   }
 
   const onClose = () => setModal(false);

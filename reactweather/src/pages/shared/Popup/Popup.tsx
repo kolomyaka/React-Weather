@@ -1,16 +1,17 @@
+import classNames from "classnames";
 import React from "react";
 import GlobalSvgSelector from "../../../assets/icons/global/GlobalSvgSelector";
 import { useCustomSelector } from "../../../HOOKS/store";
 import { Item } from "../../Home/components/ThisDayInfo/ThisDayInfo";
 import ThisDayItem from "../../Home/components/ThisDayInfo/ThisDayItem";
 import s from "./Popup.module.scss";
-
+import '../../../styles/index.scss'
 type Props = {
-  isModal? :boolean
-  todayName? : string
+  isModal?: boolean
+  todayName?: string
 };
 
-const Popup = ({isModal, todayName} : Props) => {
+const Popup = ({ isModal, todayName }: Props) => {
 
   const items = [
     { icon_id: "temp", name: "температура", value: "20° - ощущается как 17°" },
@@ -23,10 +24,12 @@ const Popup = ({isModal, todayName} : Props) => {
     { icon_id: "wind", name: "ветер", value: "3 м/с юго-запад - легкий ветер" },
   ];
 
+  const isVisible = useCustomSelector(state => state.popupSlices.isVisible)
   const { daily } = useCustomSelector(state => state.weeklyWeatherSliceReducer.weeklyWeather)
 
+  console.log(isVisible);
 
-  
+
 
   return (
     <>
@@ -52,7 +55,7 @@ const Popup = ({isModal, todayName} : Props) => {
               ))}
             </div>
           </div>
-          <div className={s.close}>
+          <div className={s.closeB}>
             <GlobalSvgSelector id="close" />
           </div>
         </section>
