@@ -43,9 +43,6 @@ const Card = ({ temp, weather, dt, pressure, feelsLike, windDeg, windSpeed, icon
 
   const [isModal, setModal] = useState(false);
 
-  console.log(icon);
-
-
 
   const handleClick = () => {
     dispatch(toggleVision())

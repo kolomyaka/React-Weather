@@ -9,6 +9,7 @@ import s from "./Popup.module.scss";
 import '../../../styles/index.scss'
 import { useDispatch } from "react-redux";
 import { hideVision } from "../../../store/slices/popupSlices";
+import { usePressure } from "../../../HOOKS/useDayInfo";
 
 
 type Props = {
@@ -20,22 +21,22 @@ const Popup = ({ isModal }: Props) => {
 
   const dispatch = useDispatch()
 
+  const { temp, feels_like, wind_deg, wind_speed, icon, pressure, todayDate, todayName } = useCustomSelector(state => state.popupSlices)
+
+
   const items = [
-    { icon_id: "temp", name: "температура", value: "20° - ощущается как 17°" },
+    { icon_id: "temp", name: "температура", value: `${Math.floor(temp)}° - ощущается как ${Math.floor(feels_like)}°` },
     {
       icon_id: "pressure",
       name: "давление",
-      value: "765 мм ртутного столба - нормальное",
+      value: usePressure(pressure),
     },
     { icon_id: "precipitation", name: "Осадки", value: "Без осадков" },
     { icon_id: "wind", name: "ветер", value: "3 м/с юго-запад - легкий ветер" },
   ];
 
   const isVisible = useCustomSelector(state => state.popupSlices.isVisible)
-  const { temp, feels_like, wind_deg, wind_speed, icon, pressure, todayDate, todayName } = useCustomSelector(state => state.popupSlices)
-
-  console.log(isVisible);
-
+  const currentCity = useCustomSelector(state => state.popupSlices.currentCity)
 
   const date = new Date();
   const currentHours = date.getHours();
@@ -84,7 +85,7 @@ const Popup = ({ isModal }: Props) => {
                 Время: <span>{currentTime}</span>
               </div>
               <div className={s.day__city}>
-                Город: <span>Санкт-Петербург</span>
+                Город: <span>{currentCity}</span>
               </div>
             </div>
             <div className={s.this__day_info_items}>

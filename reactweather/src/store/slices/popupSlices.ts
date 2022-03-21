@@ -55,5 +55,5 @@ export const popupSlice = createSlice({
     }
 })
 
-export const { toggleVision, hideVision, setCurrentData } = popupSlice.actions;
+export const { toggleVision, hideVision, setCurrentData, setCurrentCity } = popupSlice.actions;
 export default popupSlice.reducer

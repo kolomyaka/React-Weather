@@ -5,6 +5,7 @@ import Select from "react-select";
 import GlobalSvgSelector from "../../../assets/icons/global/GlobalSvgSelector";
 import { Theme } from "../../../context/ThemeContext";
 import { useTheme } from "../../../HOOKS/useTheme";
+import { setCurrentCity } from "../../../store/slices/popupSlices";
 import { fetchCurrentWeather } from "../../../store/thunks/fetchCurrentWeather";
 import { fetchWeeklyWeather } from "../../../store/thunks/fetchWeeklyWeather";
 import s from "./Header.module.scss";
@@ -18,7 +19,7 @@ const Header = (props: Props) => {
   const theme = useTheme();
 
   const options = [
-    { value: "Sankt-Peterburg", label: "Санкт-Петербург", label2: [59.8944, 30.2642]},
+    { value: "Sankt-Peterburg", label: "Санкт-Петербург", label2: [59.8944, 30.2642] },
     { value: "Moscow", label: "Москва", label2: [55.7522, 37.6156] },
     { value: "Murmansk", label: "Мурманск", label2: [68, 34] },
   ];
@@ -32,8 +33,8 @@ const Header = (props: Props) => {
       border: "none",
       borderRadius: "10px",
       position: 'relative',
-      top:0,
-      right:0,
+      top: 0,
+      right: 0,
       zIndex: 10000000,
     }),
     singleValue: (styles: any) => ({
@@ -51,8 +52,9 @@ const Header = (props: Props) => {
 
   const changeSelect = (e: any) => {
     dispatch(fetchCurrentWeather(e.value))
-    dispatch(fetchWeeklyWeather(e.label2[0],e.label2[1]));
-      
+    dispatch(fetchWeeklyWeather(e.label2[0], e.label2[1]));
+    dispatch(setCurrentCity(e.label))
+
   }
 
   return (

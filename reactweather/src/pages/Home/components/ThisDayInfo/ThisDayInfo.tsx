@@ -7,28 +7,28 @@ import { Weather } from '../../../../store/types/types';
 import { usePressure, useWindDirection } from '../../../../HOOKS/useDayInfo';
 
 type Props = {
-  weather : Weather
+  weather: Weather
 }
 
 export interface Item {
   icon_id: string
-  name: string 
-  value : string
+  name: string
+  value: string
 }
 
-const ThisDayInfo = ({weather}: Props) => {
+const ThisDayInfo = ({ weather }: Props) => {
 
   const items = [
-    {icon_id: 'temp', name: 'температура', value : `${Math.floor(weather.main.temp)}° - ощущается как ${Math.floor(weather.main.feels_like)}°`},
-    {icon_id: 'pressure', name: 'давление', value : usePressure()},
-    {icon_id: 'precipitation', name: 'Осадки', value : 'Без осадков'},
-    {icon_id: 'wind', name: 'ветер', value : `${Math.ceil(weather.wind.speed)} м/с ${useWindDirection()} - легкий ветер`},
+    { icon_id: 'temp', name: 'температура', value: `${Math.floor(weather.main.temp)}° - ощущается как ${Math.floor(weather.main.feels_like)}°` },
+    { icon_id: 'pressure', name: 'давление', value: usePressure(weather.main.pressure) },
+    { icon_id: 'precipitation', name: 'Осадки', value: 'Без осадков' },
+    { icon_id: 'wind', name: 'ветер', value: `${Math.ceil(weather.wind.speed)} м/с ${useWindDirection()} - легкий ветер` },
   ]
 
   return (
     <section className={s.this__day_info}>
       <div className={s.this__day_info_items}>
-        { items.map((item: Item) => (
+        {items.map((item: Item) => (
           <ThisDayItem key={item.icon_id} item={item} />
         ))}
       </div>
