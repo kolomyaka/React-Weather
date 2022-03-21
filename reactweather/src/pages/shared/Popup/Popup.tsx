@@ -1,17 +1,25 @@
 import classNames from "classnames";
 import React from "react";
+import PopupSvgSelector from "../../../assets/icons/Popup/PopupSvgSelector";
 import GlobalSvgSelector from "../../../assets/icons/global/GlobalSvgSelector";
 import { useCustomSelector } from "../../../HOOKS/store";
 import { Item } from "../../Home/components/ThisDayInfo/ThisDayInfo";
 import ThisDayItem from "../../Home/components/ThisDayInfo/ThisDayItem";
 import s from "./Popup.module.scss";
 import '../../../styles/index.scss'
+import { useDispatch } from "react-redux";
+import { hideVision } from "../../../store/slices/popupSlices";
+
+
 type Props = {
   isModal?: boolean
   todayName?: string
 };
 
+
 const Popup = ({ isModal, todayName }: Props) => {
+
+  const dispatch = useDispatch()
 
   const items = [
     { icon_id: "temp", name: "температура", value: "20° - ощущается как 17°" },
@@ -25,22 +33,31 @@ const Popup = ({ isModal, todayName }: Props) => {
   ];
 
   const isVisible = useCustomSelector(state => state.popupSlices.isVisible)
-  const { daily } = useCustomSelector(state => state.weeklyWeatherSliceReducer.weeklyWeather)
+  const { temp, feels_like, wind_deg, wind_speed, icon, pressure } = useCustomSelector(state => state.popupSlices)
 
-  console.log(isVisible);
 
+  const handleClick = () => {
+    dispatch(hideVision())
+  }
+  console.log(icon);
 
 
   return (
     <>
-      <div className={s.blur + ' ' + s.open}>
-        <section className={s.popup}>
+      <div className={s.blur + ' ' + classNames({
+        'open': isVisible,
+        'close': !isVisible
+      })}>
+        <section className={s.popup + ' ' + classNames({
+          'open': isVisible,
+          'close': !isVisible
+        })}>
           <div className={s.popup__block}>
             <div className={s.day}>
-              <div className={s.day__temp}>12°</div>
+              <div className={s.day__temp}>{Math.floor(temp)}°</div>
               <div className={s.day__name}>Среда</div>
               <div className={s.day__img}>
-                <GlobalSvgSelector id='small_rain_sun' />
+                <PopupSvgSelector id={icon} />
               </div>
               <div className={s.day__time}>
                 Время: <span>21:54</span>
@@ -55,7 +72,7 @@ const Popup = ({ isModal, todayName }: Props) => {
               ))}
             </div>
           </div>
-          <div className={s.closeB}>
+          <div className={s.closeB} onClick={handleClick}>
             <GlobalSvgSelector id="close" />
           </div>
         </section>

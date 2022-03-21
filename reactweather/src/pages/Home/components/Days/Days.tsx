@@ -26,9 +26,6 @@ const Days = ({ weeklyWeather, weather }: Props) => {
     const { daily } = useCustomSelector(state => state.weeklyWeatherSliceReducer.weeklyWeather)
     let arr = daily.slice(1)
 
-    console.log(arr);
-
-
     return <div>
         <Tabs />
         <section className={s.days}>
@@ -43,6 +40,7 @@ const Days = ({ weeklyWeather, weather }: Props) => {
                         feelsLike={day.feels_like.day}
                         windDeg={day.wind_deg}
                         windSpeed={day.wind_speed}
+                        icon={day.weather[0].main}
                     />
                 ))
             }
