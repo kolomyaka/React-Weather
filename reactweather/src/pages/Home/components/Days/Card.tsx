@@ -36,6 +36,8 @@ const Card = ({ temp, weather, dt, pressure, feelsLike, windDeg, windSpeed, icon
 
   let myDate = new Date(dt * 1000);
   let todayName = myDate.toLocaleString('ru', { weekday: "short" })
+  let todayNameForPopup = myDate.toLocaleString('ru', { weekday: "long" })
+
   let todayDate = myDate.toLocaleString('ru', { month: 'long', day: '2-digit' })
 
 
@@ -50,10 +52,12 @@ const Card = ({ temp, weather, dt, pressure, feelsLike, windDeg, windSpeed, icon
     let currentDate = {
       feels_like: feelsLike,
       pressure: pressure,
-      day: temp.day,
+      temp: temp.day,
       wind_deg: windDeg,
       wind_speed: windSpeed,
-      icon: icon
+      icon: icon,
+      todayName: todayNameForPopup,
+      todayDate: todayDate,
     }
 
     dispatch(setCurrentData(currentDate))

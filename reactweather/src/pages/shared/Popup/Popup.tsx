@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React from "react";
+import React, { useEffect } from "react";
 import PopupSvgSelector from "../../../assets/icons/Popup/PopupSvgSelector";
 import GlobalSvgSelector from "../../../assets/icons/global/GlobalSvgSelector";
 import { useCustomSelector } from "../../../HOOKS/store";
@@ -13,11 +13,10 @@ import { hideVision } from "../../../store/slices/popupSlices";
 
 type Props = {
   isModal?: boolean
-  todayName?: string
 };
 
 
-const Popup = ({ isModal, todayName }: Props) => {
+const Popup = ({ isModal }: Props) => {
 
   const dispatch = useDispatch()
 
@@ -33,13 +32,35 @@ const Popup = ({ isModal, todayName }: Props) => {
   ];
 
   const isVisible = useCustomSelector(state => state.popupSlices.isVisible)
-  const { temp, feels_like, wind_deg, wind_speed, icon, pressure } = useCustomSelector(state => state.popupSlices)
+  const { temp, feels_like, wind_deg, wind_speed, icon, pressure, todayDate, todayName } = useCustomSelector(state => state.popupSlices)
+
+  console.log(isVisible);
+
+
+  const date = new Date();
+  const currentHours = date.getHours();
+  let currentMinutes = date.getMinutes();
+  let currentTime;
+
+
+  if (currentMinutes < 10) {
+    currentTime = currentHours + ':0' + currentMinutes;
+  } else {
+    currentTime = currentHours + ':' + currentMinutes;
+  }
 
 
   const handleClick = () => {
     dispatch(hideVision())
   }
-  console.log(icon);
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      if (isVisible) {
+        dispatch(hideVision())
+      }
+    }
+  })
 
 
   return (
@@ -55,12 +76,12 @@ const Popup = ({ isModal, todayName }: Props) => {
           <div className={s.popup__block}>
             <div className={s.day}>
               <div className={s.day__temp}>{Math.floor(temp)}°</div>
-              <div className={s.day__name}>Среда</div>
+              <div className={s.day__name}>{todayName}</div>
               <div className={s.day__img}>
                 <PopupSvgSelector id={icon} />
               </div>
               <div className={s.day__time}>
-                Время: <span>21:54</span>
+                Время: <span>{currentTime}</span>
               </div>
               <div className={s.day__city}>
                 Город: <span>Санкт-Петербург</span>
