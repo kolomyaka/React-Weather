@@ -22,7 +22,7 @@ const ThisDayInfo = ({ weather }: Props) => {
     { icon_id: 'temp', name: 'температура', value: `${Math.floor(weather.main.temp)}° - ощущается как ${Math.floor(weather.main.feels_like)}°` },
     { icon_id: 'pressure', name: 'давление', value: usePressure(weather.main.pressure) },
     { icon_id: 'precipitation', name: 'Осадки', value: 'Без осадков' },
-    { icon_id: 'wind', name: 'ветер', value: `${Math.ceil(weather.wind.speed)} м/с ${useWindDirection()} - легкий ветер` },
+    { icon_id: 'wind', name: 'ветер', value: `${Math.floor(weather.wind.speed)} м/с ${useWindDirection(weather.wind.deg)} - легкий ветер` },
   ]
 
   return (

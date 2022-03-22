@@ -2,9 +2,7 @@ import { selectCurrentPressure } from './../store/selectors';
 import { selectCurrentWindDirection } from "../store/selectors";
 import { useCustomSelector } from "./store";
 
-export const useWindDirection = () => {
-
-  const deg = useCustomSelector(selectCurrentWindDirection);
+export const useWindDirection = (deg: number) => {
 
   if (deg >= 337.6 && deg <= 22.5) {
     return 'север';

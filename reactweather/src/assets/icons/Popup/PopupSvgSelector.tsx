@@ -1,7 +1,7 @@
 import React from 'react'
 import sun from '../../images/sun.png';
 import Cloud from '../../images/Clouds.png';
-import Snow from '../../images/snow.png';
+import snow from '../../images/snow.svg';
 
 type Props = {
     id: string
@@ -131,7 +131,9 @@ const GlobalSvgSelector = ({ id }: Props) => {
             )
         case 'Snow':
             return (
-                <img src={Snow} alt="Snow" />
+                <img src={snow} alt="" />
+
+                // <img src={Snow} alt="Snow" />
                 // <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64"><defs>
                 //     <linearGradient id="c" x1="16.5" x2="21.5" y1="19.67" y2="28.33" gradientUnits="userSpaceOnUse">
                 //         <stop offset="0" stopColor="#fbbf24" /><stop offset=".45" stopColor="#fbbf24" />

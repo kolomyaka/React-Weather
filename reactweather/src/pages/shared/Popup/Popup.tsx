@@ -9,7 +9,7 @@ import s from "./Popup.module.scss";
 import '../../../styles/index.scss'
 import { useDispatch } from "react-redux";
 import { hideVision } from "../../../store/slices/popupSlices";
-import { usePressure } from "../../../HOOKS/useDayInfo";
+import { usePressure, useWindDirection } from "../../../HOOKS/useDayInfo";
 
 
 type Props = {
@@ -32,7 +32,7 @@ const Popup = ({ isModal }: Props) => {
       value: usePressure(pressure),
     },
     { icon_id: "precipitation", name: "Осадки", value: "Без осадков" },
-    { icon_id: "wind", name: "ветер", value: "3 м/с юго-запад - легкий ветер" },
+    { icon_id: "wind", name: "ветер", value: `${Math.floor(wind_speed)} м/с ${useWindDirection(wind_deg)} - легкий ветер` },
   ];
 
   const isVisible = useCustomSelector(state => state.popupSlices.isVisible)
@@ -50,18 +50,20 @@ const Popup = ({ isModal }: Props) => {
     currentTime = currentHours + ':' + currentMinutes;
   }
 
+  const hidePopup = (e: KeyboardEvent) => {
+    if (e.key === 'Escape' || e.key === '1') {
+      dispatch(hideVision())
+    }
+  }
 
   const handleClick = () => {
     dispatch(hideVision())
   }
 
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      if (isVisible) {
-        dispatch(hideVision())
-      }
-    }
-  })
+  useEffect(() => {
+    document.addEventListener('keydown', hidePopup)
+
+  }, [])
 
 
   return (
