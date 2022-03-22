@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import PopupSvgSelector from "../../../assets/icons/Popup/PopupSvgSelector";
 import GlobalSvgSelector from "../../../assets/icons/global/GlobalSvgSelector";
 import { useCustomSelector } from "../../../HOOKS/store";
@@ -23,6 +23,17 @@ const Popup = ({ isModal }: Props) => {
 
   const { temp, feels_like, wind_deg, wind_speed, icon, pressure, todayName } = useCustomSelector(state => state.popupSlices)
 
+  const [windStrength, setWindStrength] = useState('');
+
+  useEffect(() => {
+    if (wind_speed < 4) {
+      setWindStrength('легкий')
+    } else if (wind_speed >= 4 && wind_speed <= 6) {
+      setWindStrength('умеренный')
+    } else {
+      setWindStrength('сильный')
+    }
+  }, [wind_speed])
 
   const items = [
     { icon_id: "temp", name: "температура", value: `${Math.floor(temp)}° - ощущается как ${Math.floor(feels_like)}°` },
@@ -32,7 +43,7 @@ const Popup = ({ isModal }: Props) => {
       value: usePressure(pressure),
     },
     { icon_id: "precipitation", name: "Осадки", value: "Без осадков" },
-    { icon_id: "wind", name: "ветер", value: `${Math.floor(wind_speed)} м/с ${useWindDirection(wind_deg)} - легкий ветер` },
+    { icon_id: "wind", name: "ветер", value: `${Math.floor(wind_speed)} м/с ${useWindDirection(wind_deg)} - ${windStrength} ветер` },
   ];
 
   const isVisible = useCustomSelector(state => state.popupSlices.isVisible)

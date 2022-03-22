@@ -6,6 +6,7 @@ import GlobalSvgSelector from "../../../assets/icons/global/GlobalSvgSelector";
 import { Theme } from "../../../context/ThemeContext";
 import { useTheme } from "../../../HOOKS/useTheme";
 import { setCurrentCoords } from "../../../store/slices/currentWeatherSlice";
+import { setCurrentCity } from "../../../store/slices/popupSlices";
 import { fetchCurrentWeather } from "../../../store/thunks/fetchCurrentWeather";
 import { fetchWeeklyWeather } from "../../../store/thunks/fetchWeeklyWeather";
 import s from "./Header.module.scss";
@@ -55,7 +56,7 @@ const Header = (props: Props) => {
     dispatch(fetchCurrentWeather(e.value))
     dispatch(fetchWeeklyWeather(e.label2[0], e.label2[1]));
     dispatch(setCurrentCoords(e.label2))
-
+    dispatch(setCurrentCity(e.label))
   }
 
   return (

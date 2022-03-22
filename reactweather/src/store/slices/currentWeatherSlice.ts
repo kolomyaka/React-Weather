@@ -71,7 +71,7 @@ export const currentWeatherSlice = createSlice({
         setCurrentCoords(state, action: PayloadAction<Array<number>>) {
             state.currentLat = action.payload[0];
             state.currentLon = action.payload[1]
-        }
+        },
 
     }
 })
