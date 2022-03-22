@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import s from './ThisDayInfo.module.scss';
 import cloud from '../../../../assets/images/cloud.png';
@@ -18,11 +18,23 @@ export interface Item {
 
 const ThisDayInfo = ({ weather }: Props) => {
 
+  const [windStrength, setWindStrength] = useState('');
+
+  useEffect(() => {
+    if (weather.wind.speed < 4) {
+      setWindStrength('легкий')
+    } else if (weather.wind.speed >= 4 && weather.wind.speed <= 6) {
+      setWindStrength('умеренный')
+    } else {
+      setWindStrength('сильный')
+    }
+  }, [])
+
   const items = [
     { icon_id: 'temp', name: 'температура', value: `${Math.floor(weather.main.temp)}° - ощущается как ${Math.floor(weather.main.feels_like)}°` },
     { icon_id: 'pressure', name: 'давление', value: usePressure(weather.main.pressure) },
     { icon_id: 'precipitation', name: 'Осадки', value: 'Без осадков' },
-    { icon_id: 'wind', name: 'ветер', value: `${Math.floor(weather.wind.speed)} м/с ${useWindDirection(weather.wind.deg)} - легкий ветер` },
+    { icon_id: 'wind', name: 'ветер', value: `${Math.floor(weather.wind.speed)} м/с ${useWindDirection(weather.wind.deg)} - ${windStrength} ветер` },
   ]
 
   return (

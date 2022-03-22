@@ -6,12 +6,15 @@ type CurrentWeather = {
     weather: Weather
     isLoading: boolean
     response: Response
+    currentLat: number
+    currentLon: number
 }
 
 export type Response = {
     status: number
     message: string
 }
+
 
 const initialState: CurrentWeather = {
     weather: {
@@ -35,7 +38,10 @@ const initialState: CurrentWeather = {
     response: {
         status: 0,
         message: '',
-    }
+    },
+    currentLat: 59.8944,
+    currentLon: 30.2642,
+
 }
 
 // Создаем slice
@@ -61,9 +67,15 @@ export const currentWeatherSlice = createSlice({
                 status: action.payload.status,
                 message: action.payload.statusText
             }
+        },
+        setCurrentCoords(state, action: PayloadAction<Array<number>>) {
+            state.currentLat = action.payload[0];
+            state.currentLon = action.payload[1]
         }
 
     }
 })
+
+export const { setCurrentCoords } = currentWeatherSlice.actions;
 
 export default currentWeatherSlice.reducer;

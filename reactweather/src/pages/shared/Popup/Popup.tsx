@@ -21,7 +21,7 @@ const Popup = ({ isModal }: Props) => {
 
   const dispatch = useDispatch()
 
-  const { temp, feels_like, wind_deg, wind_speed, icon, pressure, todayDate, todayName } = useCustomSelector(state => state.popupSlices)
+  const { temp, feels_like, wind_deg, wind_speed, icon, pressure, todayName } = useCustomSelector(state => state.popupSlices)
 
 
   const items = [
