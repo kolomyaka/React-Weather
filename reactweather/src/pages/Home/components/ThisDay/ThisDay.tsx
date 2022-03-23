@@ -11,9 +11,7 @@ type Props = {
   weather : Weather
 }
 
-const ThisDay = ({weather}: Props) => {
-
-  
+const ThisDay = ({weather}: Props) => {  
   
   const date = new Date();
   const currentHours = date.getHours();

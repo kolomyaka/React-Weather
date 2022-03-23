@@ -35,7 +35,6 @@ const GlobalSvgSelector = ({ id }: Props) => {
         case 'Clear':
             return (
                 <img src={sun} alt="sun" />
-                // <svg xmlns="http://www.w3.org/2000/svg" width='60' height='60' viewBox="0 0 64 64"><defs><linearGradient id="a" x1="26.75" x2="37.25" y1="22.91" y2="41.09" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#fbbf24" /><stop offset=".45" stopColor="#fbbf24" /><stop offset="1" stopColor="#f59e0b" /></linearGradient></defs><circle cx="32" cy="32" r="10.5" fill="url(#a)" stroke="#f8af18" strokeMiterlimit="10" strokeWidth=".5" /><path fill="none" stroke="#fbbf24" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="3" d="M32 15.71V9.5m0 45v-6.21m11.52-27.81 4.39-4.39M16.09 47.91l4.39-4.39m0-23-4.39-4.39m31.82 31.78-4.39-4.39M15.71 32H9.5m45 0h-6.21"><animateTransform attributeName="transform" dur="45s" repeatCount="indefinite" type="rotate" values="0 32 32; 360 32 32" /></path></svg>
             )
         case 'small_rain_sun':
             return (
@@ -83,40 +82,10 @@ const GlobalSvgSelector = ({ id }: Props) => {
         case 'Rain':
             return (
                 <img src={rain} alt="rain" />
-                // <svg width="60" height="60" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                //     <path d="M14.218 32.926L12.118 37.924C11.798 38.688 12.156 39.568 12.92 39.888C13.684 40.208 14.564 39.85 14.884 39.086L16.984 34.088C17.304 33.324 16.946 32.444 16.182 32.124C15.418 31.804 14.538 32.162 14.218 32.926ZM30.218 32.926L28.118 37.924C27.798 38.688 28.156 39.568 28.92 39.888C29.684 40.208 30.564 39.85 30.884 39.086L32.984 34.088C33.304 33.324 32.946 32.444 32.182 32.124C31.418 31.804 30.538 32.162 30.218 32.926ZM22.218 30.926L20.118 35.924C19.798 36.688 20.156 37.568 20.92 37.888C21.684 38.208 22.564 37.85 22.884 37.086L24.984 32.088C25.304 31.324 24.946 30.444 24.182 30.124C23.418 29.804 22.538 30.162 22.218 30.926Z" fill="#66AFEB" />
-                //     <path d="M14 28C9.582 28 6 24.418 6 20C6 15.582 9.582 12 14 12C14.834 12 15.636 12.128 16.392 12.364C17.518 8.68 20.946 6 25 6C29.97 6 34 10.03 34 15C34 15.47 33.964 15.93 33.894 16.38C34.55 16.134 35.258 16 36 16C39.314 16 42 18.686 42 22C42 25.314 39.314 28 36 28H14Z" fill="url(#paint0_linear_2_525)" />
-                //     <path d="M16 15C16 19.97 20.03 24 25 24C29.502 24 33.23 20.696 33.894 16.38C34.55 16.134 35.258 16 36 16C39.314 16 42 18.686 42 22C42 25.314 39.314 28 36 28H14C9.582 28 6 24.418 6 20C6 15.582 9.582 12 14 12C14.834 12 15.636 12.128 16.392 12.364C16.136 13.198 16 14.082 16 15Z" fill="url(#paint1_radial_2_525)" />
-                //     <defs>
-                //         <linearGradient id="paint0_linear_2_525" x1="24" y1="6" x2="24" y2="28" gradientUnits="userSpaceOnUse">
-                //             <stop stopColor="#9FC7FF" />
-                //             <stop offset="1" stopColor="#9BC1F5" />
-                //         </linearGradient>
-                //         <radialGradient id="paint1_radial_2_525" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(10.7539 -24.6966) rotate(-90) scale(20.9574 6.69705)">
-                //             <stop stopColor="#486DA8" stopOpacity="0.4" />
-                //             <stop offset="1" stopColor="#486DA8" stopOpacity="0" />
-                //         </radialGradient>
-                //     </defs>
-                // </svg>
             )
         case 'Clouds':
             return (
                 <img src={Cloud} alt="Clouds" />
-                // <svg width="60" height="60" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                //     <path opacity="0.32" d="M38 28C41.314 28 44 25.314 44 22C44 18.686 41.314 16 38 16H37.938C37.978 15.672 38 15.338 38 15C38 10.582 34.418 7 30 7C26.5 7 23.524 9.248 22.44 12.378C21.67 12.132 20.852 12 20 12C15.582 12 12 15.582 12 20C12 24.418 15.582 28 20 28C20.69 28 21.36 27.912 22 27.748V28H38Z" fill="#73A5E6" />
-                //     <path d="M12 38C7.582 38 4 34.418 4 30C4 25.582 7.582 22 12 22C12.834 22 13.636 22.128 14.392 22.364C15.518 18.68 18.946 16 23 16C27.97 16 32 20.03 32 25C32 25.47 31.964 25.93 31.894 26.38C32.55 26.134 33.258 26 34 26C37.314 26 40 28.686 40 32C40 35.314 37.314 38 34 38H12Z" fill="url(#paint0_linear_2_550)" />
-                //     <path d="M14 25C14 29.97 18.03 34 23 34C27.502 34 31.23 30.696 31.894 26.38C32.55 26.134 33.258 26 34 26C37.314 26 40 28.686 40 32C40 35.314 37.314 38 34 38H12C7.582 38 4 34.418 4 30C4 25.582 7.582 22 12 22C12.834 22 13.636 22.128 14.392 22.364C14.136 23.198 14 24.082 14 25Z" fill="url(#paint1_radial_2_550)" />
-                //     <defs>
-                //         <linearGradient id="paint0_linear_2_550" x1="22" y1="16" x2="22" y2="38" gradientUnits="userSpaceOnUse">
-                //             <stop stopColor="#9FC7FF" />
-                //             <stop offset="1" stopColor="#9BC1F5" />
-                //         </linearGradient>
-                //         <radialGradient id="paint1_radial_2_550" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(17.9439 -22.6966) rotate(-90) scale(20.9574 6.69705)">
-                //             <stop stopColor="#486DA8" stopOpacity="0.4" />
-                //             <stop offset="1" stopColor="#486DA8" stopOpacity="0" />
-                //         </radialGradient>
-                //     </defs>
-                // </svg>
             )
         case 'sunny':
             return (
@@ -134,25 +103,6 @@ const GlobalSvgSelector = ({ id }: Props) => {
         case 'Snow':
             return (
                 <img src={snow} alt="" />
-
-                // <img src={Snow} alt="Snow" />
-                // <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64"><defs>
-                //     <linearGradient id="c" x1="16.5" x2="21.5" y1="19.67" y2="28.33" gradientUnits="userSpaceOnUse">
-                //         <stop offset="0" stopColor="#fbbf24" /><stop offset=".45" stopColor="#fbbf24" />
-                //         <stop offset="1" stopColor="#f59e0b" /></linearGradient>
-                //     <linearGradient id="d" x1="22.56" x2="39.2" y1="21.96" y2="50.8" gradientUnits="userSpaceOnUse">
-                //         <stop offset="0" stopColor="#f3f7fe" /><stop offset=".45" stopColor="#f3f7fe" />
-                //         <stop offset="1" stopColor="#deeafb" /></linearGradient>
-                //     <linearGradient id="a" x1="22.66" x2="25.34" y1="42.68" y2="47.32" gradientUnits="userSpaceOnUse">
-                //         <stop offset="0" stopColor="#86c3db" /><stop offset=".45" stopColor="#86c3db" />
-                //         <stop offset="1" stopColor="#5eafcf" /></linearGradient>
-                //     <linearGradient id="e" x1="36.66" x2="39.34" y1="42.68" y2="47.32" xlinkHref="#a" />
-                //     <linearGradient id="b" x1="23.31" x2="24.69" y1="44.3" y2="46.7" gradientUnits="userSpaceOnUse">
-                //         <stop offset="0" stopColor="#4286ee" /><stop offset=".45" stopColor="#4286ee" />
-                //         <stop offset="1" stopColor="#0950bc" /></linearGradient>
-                //     <linearGradient id="f" x1="30.31" x2="31.69" y1="44.3" y2="46.7" xlinkHref="#b" />
-                //     <linearGradient id="g" x1="37.31" x2="38.69" y1="44.3" y2="46.7" xlinkHref="#b" /></defs>
-                //     <circle cx="19" cy="24" r="5" fill="url(#c)" stroke="#f8af18" strokeMiterlimit="10" strokeWidth=".5" /><path fill="none" stroke="#fbbf24" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="2" d="M19 15.67V12.5m0 23v-3.17m5.89-14.22 2.24-2.24M10.87 32.13l2.24-2.24m0-11.78-2.24-2.24m16.26 16.26-2.24-2.24M7.5 24h3.17m19.83 0h-3.17"><animateTransform attributeName="transform" dur="45s" repeatCount="indefinite" type="rotate" values="0 19 24; 360 19 24" /></path><path fill="url(#d)" stroke="#e6effc" strokeMiterlimit="10" strokeWidth=".5" d="M46.5 31.5h-.32a10.49 10.49 0 0 0-19.11-8 7 7 0 0 0-10.57 6 7.21 7.21 0 0 0 .1 1.14A7.5 7.5 0 0 0 18 45.5a4.19 4.19 0 0 0 .5 0h28a7 7 0 0 0 0-14z" /><path fill="url(#a)" d="m26.45 45.82-.73-.41a1.59 1.59 0 0 0 0-.81l.73-.42a.49.49 0 0 0 .18-.68.51.51 0 0 0-.69-.18l-.72.41a1.66 1.66 0 0 0-.71-.41v-.82a.51.51 0 0 0-1 0v.83a1.74 1.74 0 0 0-.71.4l-.72-.41a.51.51 0 0 0-.69.18.49.49 0 0 0 .18.68l.73.41a1.59 1.59 0 0 0 0 .81l-.73.42a.49.49 0 0 0-.18.68.5.5 0 0 0 .44.25.47.47 0 0 0 .25-.07l.72-.41a2 2 0 0 0 .33.25 1.5 1.5 0 0 0 .38.15v.83a.51.51 0 0 0 1 0v-.83a1.74 1.74 0 0 0 .71-.4l.72.41a.47.47 0 0 0 .25.07.5.5 0 0 0 .44-.25.49.49 0 0 0-.18-.68zm-2.83-.17a.75.75 0 0 1 .38-1.4.75.75 0 0 1 .38.1.75.75 0 0 1 .28 1 .77.77 0 0 1-1.04.3z"><animateTransform additive="sum" attributeName="transform" begin="-2.7s" dur="4s" repeatCount="indefinite" type="translate" values="1 -6; -1 12" /><animateTransform additive="sum" attributeName="transform" begin="-2.7s" dur="4s" repeatCount="indefinite" type="rotate" values="-45 24 45; 45 24 45" /><animate attributeName="opacity" begin="-2.7s" dur="4s" repeatCount="indefinite" values="0;1;1;1;0" /></path><path fill="url(#e)" d="m40.45 45.82-.73-.41a1.59 1.59 0 0 0 0-.81l.73-.42a.49.49 0 0 0 .18-.68.51.51 0 0 0-.69-.18l-.72.41a1.66 1.66 0 0 0-.71-.41v-.82a.51.51 0 0 0-1 0v.83a1.74 1.74 0 0 0-.71.4l-.72-.41a.51.51 0 0 0-.69.18.49.49 0 0 0 .18.68l.73.41a1.59 1.59 0 0 0 0 .81l-.73.42a.49.49 0 0 0-.18.68.5.5 0 0 0 .44.25.47.47 0 0 0 .25-.07l.72-.41a2 2 0 0 0 .33.25 1.5 1.5 0 0 0 .38.15v.83a.51.51 0 0 0 1 0v-.83a1.74 1.74 0 0 0 .71-.4l.72.41a.47.47 0 0 0 .25.07.5.5 0 0 0 .44-.25.49.49 0 0 0-.18-.68zm-2.83-.17a.75.75 0 0 1 .38-1.4.75.75 0 0 1 .38.1.75.75 0 0 1 .28 1 .77.77 0 0 1-1.04.3z"><animateTransform additive="sum" attributeName="transform" begin="-1.3s" dur="4s" repeatCount="indefinite" type="translate" values="1 -6; -1 12" /><animateTransform additive="sum" attributeName="transform" begin="-1.3s" dur="4s" repeatCount="indefinite" type="rotate" values="-45 38 45; 45 38 45" /><animate attributeName="opacity" begin="-1.3s" dur="4s" repeatCount="indefinite" values="0;1;1;1;0" /></path><path fill="none" stroke="url(#b)" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="2" d="m24.08 45.01-.16.98"><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="translate" values="1 -5; -2 10" /><animate attributeName="opacity" dur="1.5s" repeatCount="indefinite" values="0;1;1;0" /></path><path fill="none" stroke="url(#f)" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="2" d="m31.08 45.01-.16.98"><animateTransform attributeName="transform" begin="-0.5s" dur="1.5s" repeatCount="indefinite" type="translate" values="1 -5; -2 10" /><animate attributeName="opacity" begin="-0.5s" dur="1.5s" repeatCount="indefinite" values="0;1;1;0" /></path><path fill="none" stroke="url(#g)" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="2" d="m38.08 45.01-.16.98"><animateTransform attributeName="transform" begin="-1s" dur="1.5s" repeatCount="indefinite" type="translate" values="1 -5; -2 10" /><animate attributeName="opacity" begin="-1s" dur="1.5s" repeatCount="indefinite" values="0;1;1;0" /></path></svg>
             )
         default:
             return null;

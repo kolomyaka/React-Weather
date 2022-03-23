@@ -40,9 +40,7 @@ const Card = ({ temp, weather, dt, pressure, feelsLike, windDeg, windSpeed, icon
 
   let todayDate = myDate.toLocaleString('ru', { month: 'long', day: '2-digit' })
 
-
   const [isModal, setModal] = useState(false);
-
 
   const handleClick = () => {
     dispatch(toggleVision())
@@ -56,13 +54,8 @@ const Card = ({ temp, weather, dt, pressure, feelsLike, windDeg, windSpeed, icon
       todayName: todayNameForPopup,
       todayDate: todayDate,
     }
-
     dispatch(setCurrentData(currentDate))
-
   }
-
-  const onClose = () => setModal(false);
-
 
   return (
     <>

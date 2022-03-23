@@ -62,7 +62,7 @@ const Popup = ({ isModal }: Props) => {
   }
 
   const hidePopup = (e: KeyboardEvent) => {
-    if (e.key === 'Escape' || e.key === '1') {
+    if (e.key === 'Escape') {
       dispatch(hideVision())
     }
   }
@@ -73,7 +73,6 @@ const Popup = ({ isModal }: Props) => {
 
   useEffect(() => {
     document.addEventListener('keydown', hidePopup)
-
   }, [])
 
 

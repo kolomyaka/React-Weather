@@ -10,7 +10,7 @@ type Props = {
 const ThisDayItem = ({ item }: Props) => {
 
     let { icon_id, name, value } = item;
-
+    
     return (
         <div className={s.item}>
             <div className={s.indicator}>
