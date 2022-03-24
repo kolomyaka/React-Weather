@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useCustomSelector } from '../../../../HOOKS/store';
-import { fetchMonthWeather } from '../../../../store/thunks/fetchMonthWeather';
+import { fetchTenDaysWeather } from '../../../../store/thunks/fetchTenDaysWeather';
 
 
 
@@ -25,15 +25,14 @@ const Tabs = (props: Props) => {
 
   const tabs: Array<Tabs> = [
     { value: 'На неделю' },
-    { value: 'На месяц' },
     { value: 'На 10 дней' },
   ]
 
   const handleChange = (index: number) => {
-    setActiveTab(index);
-    console.log('hey');
-
-    dispatch(fetchMonthWeather(currentLat, currentLon))
+    setActiveTab(index);    
+    if (index === 1) {
+      dispatch(fetchTenDaysWeather('Saint-Petersburg'));
+    }
   }
 
   return (
