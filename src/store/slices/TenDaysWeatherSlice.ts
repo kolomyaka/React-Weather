@@ -17,7 +17,7 @@ const initialState: TenDaysWeatherType = {
     }
 }
 
-export const tenDaysWeather = createSlice({
+export const tenDaysWeatherSlice = createSlice({
     name: 'tenDaysWeather',
     initialState,
     reducers: {
@@ -42,4 +42,4 @@ export const tenDaysWeather = createSlice({
     }
 })
 
-export default tenDaysWeather.reducer;
+export default tenDaysWeatherSlice.reducer;

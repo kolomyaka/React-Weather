@@ -3,14 +3,15 @@ import currentWeatherSliceReducer from './slices/currentWeatherSlice';
 import weeklyWeatherSliceReducer from './slices/weeklyWeatherSlice';
 import popupSlices from "./slices/popupSlices";
 import monthWeatherSlice from "./slices/monthWeatherSlice";
-
+import tenDaysWeatherSlice from './slices/TenDaysWeatherSlice';
 
 
 const rootReducer = combineReducers({
     currentWeatherSliceReducer,
     weeklyWeatherSliceReducer,
     popupSlices,
-    monthWeatherSlice
+    monthWeatherSlice,
+    tenDaysWeatherSlice
 });
 
 export const store = configureStore({

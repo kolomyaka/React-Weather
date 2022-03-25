@@ -1,11 +1,8 @@
-import React, { ReactElement, useState } from 'react'
-import { Day } from './Days';
+import React from 'react'
 import CardSvgSelector from '../../../../assets/icons/Card/CardSvgSelector';
 
 import { setCurrentData, toggleVision } from "../../../../store/slices/popupSlices";
 import s from './Days.module.scss';
-import Popup from '../../../shared/Popup/Popup';
-import { WeeklyWeather } from '../../../../store/types/types';
 import { useDispatch } from 'react-redux';
 
 type TempType = {
@@ -39,8 +36,6 @@ const Card = ({ temp, weather, dt, pressure, feelsLike, windDeg, windSpeed, icon
   let todayNameForPopup = myDate.toLocaleString('ru', { weekday: "long" })
 
   let todayDate = myDate.toLocaleString('ru', { month: 'long', day: '2-digit' })
-
-  const [isModal, setModal] = useState(false);
 
   const handleClick = () => {
     dispatch(toggleVision())
