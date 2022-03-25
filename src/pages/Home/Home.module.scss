@@ -7,3 +7,9 @@
     justify-content: space-between;
     margin-bottom: 50px;
 }
+
+@media (max-width: 750px) {
+    .wrapper {
+        flex-wrap: wrap;
+    }   
+}

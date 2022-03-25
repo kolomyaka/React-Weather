@@ -48,3 +48,21 @@
         }
     }
 }
+
+@media (max-width: 890px) {
+    .cloud {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 85%;
+    }
+}
+
+@media (max-width: 750px) {
+    .this__day_info {
+        max-width: 660px;
+        margin: 0 auto;
+    }
+    
+}
