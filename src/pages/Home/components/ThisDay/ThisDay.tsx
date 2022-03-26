@@ -1,8 +1,5 @@
-import React from "react";
 import GlobalSvgSelector from "../../../../assets/icons/global/GlobalSvgSelector";
-import { useCustomSelector } from "../../../../HOOKS/store";
 import { Weather } from "../../../../store/types/types";
-
 import s from "./ThisDay.module.scss";
 
 type Props = {
@@ -14,10 +11,6 @@ const ThisDay = ({ weather }: Props) => {
   const currentHours = date.getHours();
   let currentMinutes = date.getMinutes();
   let currentTime;
-
-  let isLoading = useCustomSelector(
-    (state) => state.currentWeatherSliceReducer.isLoading
-  );
 
   if (currentMinutes < 10) {
     currentTime = currentHours + ":0" + currentMinutes;

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PopupSvgSelector from "../../../assets/icons/Popup/PopupSvgSelector";
 import GlobalSvgSelector from "../../../assets/icons/global/GlobalSvgSelector";
 import { useCustomSelector } from "../../../HOOKS/store";

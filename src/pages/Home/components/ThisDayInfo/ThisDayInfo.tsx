@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import s from './ThisDayInfo.module.scss';
 import cloud from '../../../../assets/images/cloud.png';
