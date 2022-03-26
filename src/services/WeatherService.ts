@@ -1,5 +1,6 @@
 import { AxiosResponse } from "axios";
 import api from "../axios";
+import secondApi from '../axios/secondApi'
 import { Weather, WeeklyWeather } from "../store/types/types";
 
 export class WeatherService {
@@ -11,5 +12,8 @@ export class WeatherService {
     }
     static getMonthWeather(lat: number, lon: number): Promise<AxiosResponse<any>> {
         return api.get<any>(`/forecast/climate?lat=${lat}&lon=${lon}&units=metric&lang=ru`)
+    }
+    static getTenDaysWeather(city: string): Promise<AxiosResponse<any>> {
+        return secondApi.get<any>(`forecast.json?q=${city}&days=5&`)
     }
 }

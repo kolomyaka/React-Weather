@@ -97,119 +97,6 @@ const GlobalSvgSelector = ({ id }: Props) => {
           </defs>
         </svg>
       );
-    case "small_rain_sun":
-      return (
-        <svg
-          width="48"
-          height="48"
-          viewBox="0 0 48 48"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M32 24C36.4183 24 40 20.4183 40 16C40 11.5817 36.4183 8 32 8C27.5817 8 24 11.5817 24 16C24 20.4183 27.5817 24 32 24Z"
-            fill="url(#paint0_linear_2_13)"
-          />
-          <path
-            d="M30.96 1.45999L31.48 4.41399C31.828 6.38399 28.872 6.90399 28.526 4.93399L28.006 1.97999C27.658 0.00998566 30.614 -0.510014 30.96 1.45999ZM41.546 4.98199L39.826 7.43999C38.678 9.07799 36.222 7.35799 37.368 5.71999L39.088 3.26199C40.236 1.62399 42.692 3.34399 41.546 4.98199ZM20.984 6.45399L23.442 8.17399C25.08 9.32199 23.36 11.778 21.722 10.632L19.264 8.91199C17.626 7.76399 19.346 5.30799 20.984 6.45399ZM42.282 21.366L44.74 23.086C46.378 24.234 44.658 26.69 43.02 25.544L40.562 23.824C38.924 22.676 40.644 20.22 42.282 21.366ZM46.542 14.958L43.588 15.478C41.618 15.826 41.098 12.87 43.068 12.524L46.022 12.004C47.992 11.656 48.512 14.612 46.542 14.958Z"
-            fill="#FFB300"
-          />
-          <path
-            d="M14.218 38.926L12.118 43.924C11.798 44.688 12.156 45.568 12.92 45.888C13.684 46.208 14.564 45.85 14.884 45.086L16.984 40.088C17.304 39.324 16.946 38.444 16.182 38.124C15.418 37.804 14.538 38.162 14.218 38.926ZM24.218 36.926L22.118 41.924C21.798 42.688 22.156 43.568 22.92 43.888C23.684 44.208 24.564 43.85 24.884 43.086L26.984 38.088C27.304 37.324 26.946 36.444 26.182 36.124C25.418 35.804 24.538 36.162 24.218 36.926Z"
-            fill="#66AFEB"
-          />
-          <path
-            d="M12 34C7.582 34 4 30.418 4 26C4 21.582 7.582 18 12 18C12.834 18 13.636 18.128 14.392 18.364C15.518 14.68 18.946 12 23 12C27.97 12 32 16.03 32 21C32 21.47 31.964 21.93 31.894 22.38C32.55 22.134 33.258 22 34 22C37.314 22 40 24.686 40 28C40 31.314 37.314 34 34 34H12Z"
-            fill="url(#paint1_linear_2_13)"
-          />
-          <path
-            d="M14 21C14 25.97 18.03 30 23 30C27.502 30 31.23 26.696 31.894 22.38C32.55 22.134 33.258 22 34 22C37.314 22 40 24.686 40 28C40 31.314 37.314 34 34 34H12C7.582 34 4 30.418 4 26C4 21.582 7.582 18 12 18C12.834 18 13.636 18.128 14.392 18.364C14.136 19.198 14 20.082 14 21Z"
-            fill="url(#paint2_radial_2_13)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_2_13"
-              x1="40"
-              y1="8"
-              x2="28.7832"
-              y2="19.0723"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#FFB301" />
-              <stop offset="1" stopColor="#FFC533" />
-            </linearGradient>
-            <linearGradient
-              id="paint1_linear_2_13"
-              x1="22"
-              y1="12"
-              x2="22"
-              y2="34"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#9FC7FF" />
-              <stop offset="1" stopColor="#9BC1F5" />
-            </linearGradient>
-            <radialGradient
-              id="paint2_radial_2_13"
-              cx="0"
-              cy="0"
-              r="1"
-              gradientUnits="userSpaceOnUse"
-              gradientTransform="translate(15.0679 -22.6966) rotate(-90) scale(20.9574 6.69705)"
-            >
-              <stop stopColor="#486DA8" stopOpacity="0.4" />
-              <stop offset="1" stopColor="#486DA8" stopOpacity="0" />
-            </radialGradient>
-          </defs>
-        </svg>
-      );
-    case "small_rain":
-      return (
-        <svg
-          width="48"
-          height="48"
-          viewBox="0 0 48 48"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M16.218 32.926L14.118 37.924C13.798 38.688 14.156 39.568 14.92 39.888C15.684 40.208 16.564 39.85 16.884 39.086L18.984 34.088C19.304 33.324 18.946 32.444 18.182 32.124C17.418 31.804 16.538 32.162 16.218 32.926ZM26.218 30.926L24.118 35.924C23.798 36.688 24.156 37.568 24.92 37.888C25.684 38.208 26.564 37.85 26.884 37.086L28.984 32.088C29.304 31.324 28.946 30.444 28.182 30.124C27.418 29.804 26.538 30.162 26.218 30.926Z"
-            fill="#66AFEB"
-          />
-          <path
-            d="M14 28C9.582 28 6 24.418 6 20C6 15.582 9.582 12 14 12C14.834 12 15.636 12.128 16.392 12.364C17.518 8.68 20.946 6 25 6C29.97 6 34 10.03 34 15C34 15.47 33.964 15.93 33.894 16.38C34.55 16.134 35.258 16 36 16C39.314 16 42 18.686 42 22C42 25.314 39.314 28 36 28H14Z"
-            fill="url(#paint0_linear_2_537)"
-          />
-          <path
-            d="M16 15C16 19.97 20.03 24 25 24C29.502 24 33.23 20.696 33.894 16.38C34.55 16.134 35.258 16 36 16C39.314 16 42 18.686 42 22C42 25.314 39.314 28 36 28H14C9.582 28 6 24.418 6 20C6 15.582 9.582 12 14 12C14.834 12 15.636 12.128 16.392 12.364C16.136 13.198 16 14.082 16 15Z"
-            fill="url(#paint1_radial_2_537)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_2_537"
-              x1="24"
-              y1="6"
-              x2="24"
-              y2="28"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#9FC7FF" />
-              <stop offset="1" stopColor="#9BC1F5" />
-            </linearGradient>
-            <radialGradient
-              id="paint1_radial_2_537"
-              cx="0"
-              cy="0"
-              r="1"
-              gradientUnits="userSpaceOnUse"
-              gradientTransform="translate(10.7539 -24.6966) rotate(-90) scale(20.9574 6.69705)"
-            >
-              <stop stopColor="#486DA8" stopOpacity="0.4" />
-              <stop offset="1" stopColor="#486DA8" stopOpacity="0" />
-            </radialGradient>
-          </defs>
-        </svg>
-      );
     case "Rain":
       return (
         <svg
@@ -361,249 +248,249 @@ const GlobalSvgSelector = ({ id }: Props) => {
     case "Snow":
       return (
         <svg
-          width="60"
-          height="60"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 64 64"
+        width="60"
+        height="60"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 64 64"
+      >
+        <defs>
+          <linearGradient
+            id="c"
+            x1="16.5"
+            x2="21.5"
+            y1="19.67"
+            y2="28.33"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stopColor="#fbbf24" />
+            <stop offset=".45" stopColor="#fbbf24" />
+            <stop offset="1" stopColor="#f59e0b" />
+          </linearGradient>
+          <linearGradient
+            id="d"
+            x1="22.56"
+            x2="39.2"
+            y1="21.96"
+            y2="50.8"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stopColor="#f3f7fe" />
+            <stop offset=".45" stopColor="#f3f7fe" />
+            <stop offset="1" stopColor="#deeafb" />
+          </linearGradient>
+          <linearGradient
+            id="a"
+            x1="22.66"
+            x2="25.34"
+            y1="42.68"
+            y2="47.32"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stopColor="#86c3db" />
+            <stop offset=".45" stopColor="#86c3db" />
+            <stop offset="1" stopColor="#5eafcf" />
+          </linearGradient>
+          <linearGradient
+            id="e"
+            x1="36.66"
+            x2="39.34"
+            y1="42.68"
+            y2="47.32"
+            xlinkHref="#a"
+          />
+          <linearGradient
+            id="b"
+            x1="23.31"
+            x2="24.69"
+            y1="44.3"
+            y2="46.7"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stopColor="#4286ee" />
+            <stop offset=".45" stopColor="#4286ee" />
+            <stop offset="1" stopColor="#0950bc" />
+          </linearGradient>
+          <linearGradient
+            id="f"
+            x1="30.31"
+            x2="31.69"
+            y1="44.3"
+            y2="46.7"
+            xlinkHref="#b"
+          />
+          <linearGradient
+            id="g"
+            x1="37.31"
+            x2="38.69"
+            y1="44.3"
+            y2="46.7"
+            xlinkHref="#b"
+          />
+        </defs>
+        <circle
+          cx="19"
+          cy="24"
+          r="5"
+          fill="#f8af18"
+          stroke="#f8af18"
+          strokeMiterlimit="10"
+          strokeWidth=".5"
+        />
+        <path
+          fill="#f3f7fe"
+          stroke="#fbbf24"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+          d="M19 15.67V12.5m0 23v-3.17m5.89-14.22 2.24-2.24M10.87 32.13l2.24-2.24m0-11.78-2.24-2.24m16.26 16.26-2.24-2.24M7.5 24h3.17m19.83 0h-3.17"
         >
-          <defs>
-            <linearGradient
-              id="c"
-              x1="16.5"
-              x2="21.5"
-              y1="19.67"
-              y2="28.33"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset="0" stopColor="#fbbf24" />
-              <stop offset=".45" stopColor="#fbbf24" />
-              <stop offset="1" stopColor="#f59e0b" />
-            </linearGradient>
-            <linearGradient
-              id="d"
-              x1="22.56"
-              x2="39.2"
-              y1="21.96"
-              y2="50.8"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset="0" stopColor="#f3f7fe" />
-              <stop offset=".45" stopColor="#f3f7fe" />
-              <stop offset="1" stopColor="#deeafb" />
-            </linearGradient>
-            <linearGradient
-              id="a"
-              x1="22.66"
-              x2="25.34"
-              y1="42.68"
-              y2="47.32"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset="0" stopColor="#86c3db" />
-              <stop offset=".45" stopColor="#86c3db" />
-              <stop offset="1" stopColor="#5eafcf" />
-            </linearGradient>
-            <linearGradient
-              id="e"
-              x1="36.66"
-              x2="39.34"
-              y1="42.68"
-              y2="47.32"
-              xlinkHref="#a"
-            />
-            <linearGradient
-              id="b"
-              x1="23.31"
-              x2="24.69"
-              y1="44.3"
-              y2="46.7"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset="0" stopColor="#4286ee" />
-              <stop offset=".45" stopColor="#4286ee" />
-              <stop offset="1" stopColor="#0950bc" />
-            </linearGradient>
-            <linearGradient
-              id="f"
-              x1="30.31"
-              x2="31.69"
-              y1="44.3"
-              y2="46.7"
-              xlinkHref="#b"
-            />
-            <linearGradient
-              id="g"
-              x1="37.31"
-              x2="38.69"
-              y1="44.3"
-              y2="46.7"
-              xlinkHref="#b"
-            />
-          </defs>
-          <circle
-            cx="19"
-            cy="24"
-            r="5"
-            fill="url(#c)"
-            stroke="#f8af18"
-            strokeMiterlimit="10"
-            strokeWidth=".5"
+          <animateTransform
+            attributeName="transform"
+            dur="45s"
+            repeatCount="indefinite"
+            type="rotate"
+            values="0 19 24; 360 19 24"
           />
-          <path
-            fill="none"
-            stroke="#fbbf24"
-            strokeLinecap="round"
-            strokeMiterlimit="10"
-            strokeWidth="2"
-            d="M19 15.67V12.5m0 23v-3.17m5.89-14.22 2.24-2.24M10.87 32.13l2.24-2.24m0-11.78-2.24-2.24m16.26 16.26-2.24-2.24M7.5 24h3.17m19.83 0h-3.17"
-          >
-            <animateTransform
-              attributeName="transform"
-              dur="45s"
-              repeatCount="indefinite"
-              type="rotate"
-              values="0 19 24; 360 19 24"
-            />
-          </path>
-          <path
-            fill="url(#d)"
-            stroke="#e6effc"
-            strokeMiterlimit="10"
-            strokeWidth=".5"
-            d="M46.5 31.5h-.32a10.49 10.49 0 0 0-19.11-8 7 7 0 0 0-10.57 6 7.21 7.21 0 0 0 .1 1.14A7.5 7.5 0 0 0 18 45.5a4.19 4.19 0 0 0 .5 0h28a7 7 0 0 0 0-14z"
+        </path>
+        <path
+          fill="#f3f7fe"
+          stroke="#e6effc"
+          strokeMiterlimit="10"
+          strokeWidth=".5"
+          d="M46.5 31.5h-.32a10.49 10.49 0 0 0-19.11-8 7 7 0 0 0-10.57 6 7.21 7.21 0 0 0 .1 1.14A7.5 7.5 0 0 0 18 45.5a4.19 4.19 0 0 0 .5 0h28a7 7 0 0 0 0-14z"
+        />
+        <path
+          fill="#f3f7fe"
+          d="m26.45 45.82-.73-.41a1.59 1.59 0 0 0 0-.81l.73-.42a.49.49 0 0 0 .18-.68.51.51 0 0 0-.69-.18l-.72.41a1.66 1.66 0 0 0-.71-.41v-.82a.51.51 0 0 0-1 0v.83a1.74 1.74 0 0 0-.71.4l-.72-.41a.51.51 0 0 0-.69.18.49.49 0 0 0 .18.68l.73.41a1.59 1.59 0 0 0 0 .81l-.73.42a.49.49 0 0 0-.18.68.5.5 0 0 0 .44.25.47.47 0 0 0 .25-.07l.72-.41a2 2 0 0 0 .33.25 1.5 1.5 0 0 0 .38.15v.83a.51.51 0 0 0 1 0v-.83a1.74 1.74 0 0 0 .71-.4l.72.41a.47.47 0 0 0 .25.07.5.5 0 0 0 .44-.25.49.49 0 0 0-.18-.68zm-2.83-.17a.75.75 0 0 1 .38-1.4.75.75 0 0 1 .38.1.75.75 0 0 1 .28 1 .77.77 0 0 1-1.04.3z"
+        >
+          <animateTransform
+            additive="sum"
+            attributeName="transform"
+            begin="-2.7s"
+            dur="4s"
+            repeatCount="indefinite"
+            type="translate"
+            values="1 -6; -1 12"
           />
-          <path
-            fill="url(#a)"
-            d="m26.45 45.82-.73-.41a1.59 1.59 0 0 0 0-.81l.73-.42a.49.49 0 0 0 .18-.68.51.51 0 0 0-.69-.18l-.72.41a1.66 1.66 0 0 0-.71-.41v-.82a.51.51 0 0 0-1 0v.83a1.74 1.74 0 0 0-.71.4l-.72-.41a.51.51 0 0 0-.69.18.49.49 0 0 0 .18.68l.73.41a1.59 1.59 0 0 0 0 .81l-.73.42a.49.49 0 0 0-.18.68.5.5 0 0 0 .44.25.47.47 0 0 0 .25-.07l.72-.41a2 2 0 0 0 .33.25 1.5 1.5 0 0 0 .38.15v.83a.51.51 0 0 0 1 0v-.83a1.74 1.74 0 0 0 .71-.4l.72.41a.47.47 0 0 0 .25.07.5.5 0 0 0 .44-.25.49.49 0 0 0-.18-.68zm-2.83-.17a.75.75 0 0 1 .38-1.4.75.75 0 0 1 .38.1.75.75 0 0 1 .28 1 .77.77 0 0 1-1.04.3z"
-          >
-            <animateTransform
-              additive="sum"
-              attributeName="transform"
-              begin="-2.7s"
-              dur="4s"
-              repeatCount="indefinite"
-              type="translate"
-              values="1 -6; -1 12"
-            />
-            <animateTransform
-              additive="sum"
-              attributeName="transform"
-              begin="-2.7s"
-              dur="4s"
-              repeatCount="indefinite"
-              type="rotate"
-              values="-45 24 45; 45 24 45"
-            />
-            <animate
-              attributeName="opacity"
-              begin="-2.7s"
-              dur="4s"
-              repeatCount="indefinite"
-              values="0;1;1;1;0"
-            />
-          </path>
-          <path
-            fill="url(#e)"
-            d="m40.45 45.82-.73-.41a1.59 1.59 0 0 0 0-.81l.73-.42a.49.49 0 0 0 .18-.68.51.51 0 0 0-.69-.18l-.72.41a1.66 1.66 0 0 0-.71-.41v-.82a.51.51 0 0 0-1 0v.83a1.74 1.74 0 0 0-.71.4l-.72-.41a.51.51 0 0 0-.69.18.49.49 0 0 0 .18.68l.73.41a1.59 1.59 0 0 0 0 .81l-.73.42a.49.49 0 0 0-.18.68.5.5 0 0 0 .44.25.47.47 0 0 0 .25-.07l.72-.41a2 2 0 0 0 .33.25 1.5 1.5 0 0 0 .38.15v.83a.51.51 0 0 0 1 0v-.83a1.74 1.74 0 0 0 .71-.4l.72.41a.47.47 0 0 0 .25.07.5.5 0 0 0 .44-.25.49.49 0 0 0-.18-.68zm-2.83-.17a.75.75 0 0 1 .38-1.4.75.75 0 0 1 .38.1.75.75 0 0 1 .28 1 .77.77 0 0 1-1.04.3z"
-          >
-            <animateTransform
-              additive="sum"
-              attributeName="transform"
-              begin="-1.3s"
-              dur="4s"
-              repeatCount="indefinite"
-              type="translate"
-              values="1 -6; -1 12"
-            />
-            <animateTransform
-              additive="sum"
-              attributeName="transform"
-              begin="-1.3s"
-              dur="4s"
-              repeatCount="indefinite"
-              type="rotate"
-              values="-45 38 45; 45 38 45"
-            />
-            <animate
-              attributeName="opacity"
-              begin="-1.3s"
-              dur="4s"
-              repeatCount="indefinite"
-              values="0;1;1;1;0"
-            />
-          </path>
-          <path
-            fill="none"
-            stroke="url(#b)"
-            strokeLinecap="round"
-            strokeMiterlimit="10"
-            strokeWidth="2"
-            d="m24.08 45.01-.16.98"
-          >
-            <animateTransform
-              attributeName="transform"
-              dur="1.5s"
-              repeatCount="indefinite"
-              type="translate"
-              values="1 -5; -2 10"
-            />
-            <animate
-              attributeName="opacity"
-              dur="1.5s"
-              repeatCount="indefinite"
-              values="0;1;1;0"
-            />
-          </path>
-          <path
-            fill="none"
-            stroke="url(#f)"
-            strokeLinecap="round"
-            strokeMiterlimit="10"
-            strokeWidth="2"
-            d="m31.08 45.01-.16.98"
-          >
-            <animateTransform
-              attributeName="transform"
-              begin="-0.5s"
-              dur="1.5s"
-              repeatCount="indefinite"
-              type="translate"
-              values="1 -5; -2 10"
-            />
-            <animate
-              attributeName="opacity"
-              begin="-0.5s"
-              dur="1.5s"
-              repeatCount="indefinite"
-              values="0;1;1;0"
-            />
-          </path>
-          <path
-            fill="none"
-            stroke="url(#g)"
-            strokeLinecap="round"
-            strokeMiterlimit="10"
-            strokeWidth="2"
-            d="m38.08 45.01-.16.98"
-          >
-            <animateTransform
-              attributeName="transform"
-              begin="-1s"
-              dur="1.5s"
-              repeatCount="indefinite"
-              type="translate"
-              values="1 -5; -2 10"
-            />
-            <animate
-              attributeName="opacity"
-              begin="-1s"
-              dur="1.5s"
-              repeatCount="indefinite"
-              values="0;1;1;0"
-            />
-          </path>
-        </svg>
+          <animateTransform
+            additive="sum"
+            attributeName="transform"
+            begin="-2.7s"
+            dur="4s"
+            repeatCount="indefinite"
+            type="rotate"
+            values="-45 24 45; 45 24 45"
+          />
+          <animate
+            attributeName="opacity"
+            begin="-2.7s"
+            dur="4s"
+            repeatCount="indefinite"
+            values="0;1;1;1;0"
+          />
+        </path>
+        <path
+          fill="url(#e)"
+          d="m40.45 45.82-.73-.41a1.59 1.59 0 0 0 0-.81l.73-.42a.49.49 0 0 0 .18-.68.51.51 0 0 0-.69-.18l-.72.41a1.66 1.66 0 0 0-.71-.41v-.82a.51.51 0 0 0-1 0v.83a1.74 1.74 0 0 0-.71.4l-.72-.41a.51.51 0 0 0-.69.18.49.49 0 0 0 .18.68l.73.41a1.59 1.59 0 0 0 0 .81l-.73.42a.49.49 0 0 0-.18.68.5.5 0 0 0 .44.25.47.47 0 0 0 .25-.07l.72-.41a2 2 0 0 0 .33.25 1.5 1.5 0 0 0 .38.15v.83a.51.51 0 0 0 1 0v-.83a1.74 1.74 0 0 0 .71-.4l.72.41a.47.47 0 0 0 .25.07.5.5 0 0 0 .44-.25.49.49 0 0 0-.18-.68zm-2.83-.17a.75.75 0 0 1 .38-1.4.75.75 0 0 1 .38.1.75.75 0 0 1 .28 1 .77.77 0 0 1-1.04.3z"
+        >
+          <animateTransform
+            additive="sum"
+            attributeName="transform"
+            begin="-1.3s"
+            dur="4s"
+            repeatCount="indefinite"
+            type="translate"
+            values="1 -6; -1 12"
+          />
+          <animateTransform
+            additive="sum"
+            attributeName="transform"
+            begin="-1.3s"
+            dur="4s"
+            repeatCount="indefinite"
+            type="rotate"
+            values="-45 38 45; 45 38 45"
+          />
+          <animate
+            attributeName="opacity"
+            begin="-1.3s"
+            dur="4s"
+            repeatCount="indefinite"
+            values="0;1;1;1;0"
+          />
+        </path>
+        <path
+          fill="#f3f7fe"
+          stroke="#f3f7fe"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+          d="m24.08 45.01-.16.98"
+        >
+          <animateTransform
+            attributeName="transform"
+            dur="1.5s"
+            repeatCount="indefinite"
+            type="translate"
+            values="1 -5; -2 10"
+          />
+          <animate
+            attributeName="opacity"
+            dur="1.5s"
+            repeatCount="indefinite"
+            values="0;1;1;0"
+          />
+        </path>
+        <path
+          fill="#4180f0"
+          stroke="#4180f0"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+          d="m31.08 45.01-.16.98"
+        >
+          <animateTransform
+            attributeName="transform"
+            begin="-0.5s"
+            dur="1.5s"
+            repeatCount="indefinite"
+            type="translate"
+            values="1 -5; -2 10"
+          />
+          <animate
+            attributeName="opacity"
+            begin="-0.5s"
+            dur="1.5s"
+            repeatCount="indefinite"
+            values="0;1;1;0"
+          />
+        </path>
+        <path
+          fill="#4180f0"
+          stroke="#4180f0"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+          d="m38.08 45.01-.16.98"
+        >
+          <animateTransform
+            attributeName="transform"
+            begin="-1s"
+            dur="1.5s"
+            repeatCount="indefinite"
+            type="translate"
+            values="1 -5; -2 10"
+          />
+          <animate
+            attributeName="opacity"
+            begin="-1s"
+            dur="1.5s"
+            repeatCount="indefinite"
+            values="0;1;1;0"
+          />
+        </path>
+      </svg>
       );
     default:
       return null;
