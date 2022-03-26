@@ -8,3 +8,5 @@ export const selectCurrentWindDirection = (state: RootState) => state.currentWea
 export const selectCurrentPressure = (state: RootState) => state.currentWeatherSliceReducer.weather.main.pressure;
 
 export const selectWeeklyWeatherData = (state :RootState) => state.weeklyWeatherSliceReducer;
+
+export const selectCurrentIsLoading = (state: RootState) => state.currentWeatherSliceReducer.isLoading;
