@@ -1,10 +1,9 @@
-# ⛅️ Weather App made with ReactJS
+# ⛅️ Weather App made with React
 
 ### STACK:
 
-- ReactJS + hooks
+- React
 - TypeScript
-- Redux 
 - Redux Toolkit
 - redux-thunk 
 - React Router
