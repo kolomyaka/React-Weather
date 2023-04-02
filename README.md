@@ -1,12 +1,14 @@
-Полный стек:
+# ⛅️ Weather App made with ReactJS
+
+### STACK:
 
 - ReactJS + hooks
 - TypeScript
-- Redux (библиотека для хранения данных на клиентской части)
+- Redux 
 - Redux Toolkit
-- redux-thunk (доп. библиотека для Redux. Асинхроные действия).
-- React Router (библиотека для реализации переходов без перезагрузки страницы).
-- Axios (библиотека для отправки AJAX-запросов)
+- redux-thunk 
+- React Router
+- Axios 
 - classnames
 
-https://react-reduxtookit-weather.herokuapp.com/
+https://react-weather-khaki.vercel.app/
