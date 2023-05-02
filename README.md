@@ -6,7 +6,6 @@
 - TypeScript
 - Redux Toolkit
 - redux-thunk 
-- React Router
 - Axios 
 - classnames
 
